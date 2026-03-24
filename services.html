@@ -3,114 +3,256 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Marketing & Growth Services | Century Capital</title>
-<meta name="description" content="Century Capital's Marketing & Growth services — strategic visibility, performance analytics, and the algorithmic advantage for luxury brands."/>
+<title>Services & Pricing | Century Capital</title>
+<meta name="description" content="Century Capital services — web development, software systems, mobile apps, digital marketing and brand identity. Fixed pricing on core services, custom quotes on complex builds."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-  tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#fcf9f8","on-secondary":"#ffffff","surface-container-high":"#eae7e7","on-tertiary":"#ffffff","primary":"#000000","on-surface-variant":"#444748","surface-container-low":"#f6f3f2","surface-container-lowest":"#ffffff","outline-variant":"#c4c7c7","surface":"#fcf9f8","primary-container":"#1c1b1b","surface-dim":"#dcd9d9","surface-container":"#f0eded","secondary-fixed-dim":"#e9c176","error":"#ba1a1a","on-secondary-container":"#785a1a","on-primary-container":"#858383","on-primary":"#ffffff","outline":"#747878","secondary":"#775a19","surface-bright":"#fcf9f8","secondary-container":"#fed488","secondary-fixed":"#ffdea5","surface-container-highest":"#e5e2e1","on-surface":"#1c1b1b","on-background":"#1c1b1b","surface-variant":"#e5e2e1","inverse-surface":"#313030","on-error":"#ffffff","primary-fixed-dim":"#c8c6c5","primary-fixed":"#e5e2e1","on-primary-fixed":"#1c1b1b","on-primary-fixed-variant":"#474646","secondary-fixed-dim":"#e9c176","tertiary":"#000000","tertiary-container":"#241a00","on-tertiary-container":"#978246","on-tertiary":"#ffffff","tertiary-fixed":"#fbe09b","tertiary-fixed-dim":"#dec482","on-tertiary-fixed":"#241a00","on-tertiary-fixed-variant":"#56450e","error-container":"#ffdad6","on-error-container":"#93000a","surface-tint":"#5f5e5e","inverse-primary":"#c8c6c5","inverse-on-surface":"#f3f0ef","on-secondary":"#ffffff","on-secondary-fixed":"#261900","on-secondary-fixed-variant":"#5d4201"},fontFamily:{"headline":["Newsreader","serif"],"body":["Manrope","sans-serif"],"label":["Manrope","sans-serif"]},borderRadius:{"DEFAULT":"0px","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"}}}}
+  tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#fcf9f8","on-secondary":"#ffffff","surface-container-high":"#eae7e7","primary":"#000000","on-surface-variant":"#444748","surface-container-low":"#f6f3f2","surface-container-lowest":"#ffffff","outline-variant":"#c4c7c7","surface":"#fcf9f8","primary-container":"#1c1b1b","surface-dim":"#dcd9d9","surface-container":"#f0eded","secondary-fixed-dim":"#e9c176","on-secondary-container":"#785a1a","on-primary-container":"#858383","on-primary":"#ffffff","outline":"#747878","secondary":"#775a19","surface-bright":"#fcf9f8","secondary-container":"#fed488","surface-container-highest":"#e5e2e1","on-surface":"#1c1b1b","on-background":"#1c1b1b","surface-variant":"#e5e2e1","inverse-surface":"#313030"},fontFamily:{"headline":["Newsreader","serif"],"body":["Manrope","sans-serif"],"label":["Manrope","sans-serif"]},borderRadius:{"DEFAULT":"0px","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"}}}}
 </script>
 <style>
   .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;}
   .brass-gradient{background:linear-gradient(135deg,#775a19 0%,#fed488 100%);}
-  .noir-gradient{background:linear-gradient(45deg,#000000 0%,#1c1b1b 100%);}
+  #mobile-menu{display:none;} #mobile-menu.open{display:flex;}
 </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- Nav -->
-<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-[#fcf9f8]">
-<div class="text-2xl font-serif tracking-tighter text-[#1c1b1b]">CENTURY CAPITAL</div>
-<div class="hidden md:flex items-center space-x-12">
-  <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b] opacity-70 hover:opacity-100" href="index.html">Projects</a>
-  <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#775a19] border-b-2 border-[#775a19] pb-1" href="services.html">Services</a>
-  <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b] opacity-70 hover:opacity-100" href="about.html">About</a>
-  <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b] opacity-70 hover:opacity-100" href="contact.html">Contact</a>
-</div>
-<a href="contact.html" class="bg-primary text-on-primary px-8 py-2 text-xs uppercase tracking-widest font-bold hover:bg-secondary transition-colors">Inquire</a>
+<nav class="fixed top-0 left-0 w-full z-50 flex flex-col bg-[#fcf9f8] border-b border-outline-variant/10">
+  <div class="flex justify-between items-center px-8 py-6">
+    <a href="index.html" class="text-2xl font-serif tracking-tighter text-[#1c1b1b]">CENTURY CAPITAL</a>
+    <div class="hidden md:flex items-center space-x-12">
+      <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b] opacity-70 hover:opacity-100" href="index.html">Portfolio</a>
+      <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#775a19] border-b-2 border-[#775a19] pb-1" href="services.html">Services</a>
+      <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b] opacity-70 hover:opacity-100" href="about.html">About</a>
+      <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b] opacity-70 hover:opacity-100" href="contact.html">Contact</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:block bg-primary text-on-primary px-8 py-2 text-xs uppercase tracking-widest font-bold hover:bg-secondary transition-colors">Get a Quote</a>
+      <button class="md:hidden flex flex-col gap-1.5 p-2" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <span class="w-6 h-px bg-on-surface block"></span><span class="w-6 h-px bg-on-surface block"></span><span class="w-6 h-px bg-on-surface block"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="flex-col px-8 pb-6 gap-6 bg-[#fcf9f8]">
+    <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b]/70" href="index.html">Portfolio</a>
+    <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#775a19] font-bold" href="services.html">Services</a>
+    <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b]/70" href="about.html">About</a>
+    <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b]/70" href="contact.html">Contact</a>
+    <a href="contact.html" class="inline-block bg-primary text-on-primary px-8 py-2 font-sans uppercase tracking-[0.05em] text-xs w-fit">Get a Quote</a>
+  </div>
 </nav>
+
 <main class="pt-24">
 <!-- Hero -->
-<section class="relative min-h-[600px] flex items-center px-8 md:px-24 overflow-hidden">
-<div class="grid md:grid-cols-12 w-full gap-12 items-center">
-  <div class="md:col-span-7 z-10">
-    <span class="inline-block bg-secondary text-white text-[10px] uppercase tracking-[0.2em] px-3 py-1 mb-6">Service Detail</span>
-    <h1 class="text-6xl md:text-8xl font-headline italic leading-[0.9] text-primary mb-8 tracking-tighter">Strategic Visibility</h1>
-    <p class="max-w-md text-lg text-on-surface-variant leading-relaxed">We don't just buy traffic; we curate presence. Our digital marketing strategies are built on the architecture of exclusivity and the precision of high-stakes performance.</p>
-    <div class="mt-12 flex items-center space-x-6"><div class="h-[1px] w-24 bg-secondary"></div><span class="text-xs uppercase tracking-widest font-bold font-label">The Digital Frontier</span></div>
+<section class="relative min-h-[500px] flex items-center px-8 md:px-24 overflow-hidden bg-surface-container-low">
+  <div class="max-w-5xl z-10">
+    <span class="inline-block bg-secondary text-white text-[10px] uppercase tracking-[0.2em] px-3 py-1 mb-6">What We Offer</span>
+    <h1 class="text-6xl md:text-8xl font-headline italic leading-[0.9] text-primary mb-8 tracking-tighter">Services &<br/>Pricing</h1>
+    <p class="max-w-xl text-lg text-on-surface-variant leading-relaxed">Fixed prices on standard deliverables. Custom quotes on complex builds. No guesswork, no hidden fees.</p>
   </div>
-  <div class="md:col-span-5 relative">
-    <div class="aspect-[3/4] noir-gradient relative overflow-hidden group">
-      <img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60 grayscale transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlbcJIfjiOACyJ0jwd7rS9h5NkOS4hCrhk3YcA8fvdO03dz4EX5mnf1-nT-2msGvgKWp2bx7V9QwO_ZOgCsVyPTm8j4g71hKLDz__yg0hj53c5NQSskgH0YKO7P5eDBVxuXYdKoS-IxcGeBIIXD_-a5TjH_5ju6cxqC260thwFM_tZA7oY0Uvq3kjAjOqWy3mSaHNcS0byfLTVw_PD7oiFQedF4SxeNHQAFunXwTrfHyMYdyzcX4-Us1GRLqpCHoHfHYvt28-f6i4" alt="Service hero"/>
-      <div class="absolute bottom-8 left-8 right-8"><div class="text-white border-l-2 border-secondary pl-4 py-2"><p class="font-headline italic text-2xl">"Precision is the only luxury that matters in scale."</p></div></div>
-    </div>
-  </div>
-</div>
 </section>
-<!-- Performance Analytics -->
-<section class="bg-surface-container-low py-32 px-8 md:px-24">
-<div class="max-w-7xl mx-auto">
-  <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-    <div class="max-w-xl"><h2 class="text-5xl font-headline text-primary mb-6">Performance Analytics</h2><p class="text-on-surface-variant leading-relaxed">Intelligence beyond the dashboard. We interpret the noise of the digital marketplace into a clear, actionable narrative for global expansion.</p></div>
-    <div class="text-right"><span class="block text-4xl font-headline italic text-secondary">94.2%</span><span class="block text-[10px] uppercase tracking-widest text-on-surface-variant">Attribution Accuracy</span></div>
+
+<!-- Web Development -->
+<section class="py-24 px-8 md:px-24 bg-surface">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-end justify-between mb-16 border-b border-outline-variant/20 pb-8">
+      <div>
+        <span class="font-label text-xs uppercase tracking-widest text-secondary block mb-2">01</span>
+        <h2 class="font-headline text-4xl text-primary">Web Development</h2>
+      </div>
+      <span class="material-symbols-outlined text-4xl text-outline-variant">language</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Landing Page -->
+      <div class="bg-surface-container-low p-10 border-t-4 border-secondary flex flex-col justify-between">
+        <div>
+          <h3 class="font-label text-xs uppercase tracking-widest mb-4 text-secondary">Landing Page</h3>
+          <p class="font-headline text-3xl italic mb-6">Single-page impact.</p>
+          <ul class="space-y-3 text-sm text-on-surface-variant">
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Custom responsive design</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Contact form integration</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Basic SEO setup</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Mobile optimised</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Delivered in 5–7 days</li>
+          </ul>
+        </div>
+        <div class="mt-10">
+          <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Fixed Price</p>
+          <p class="font-headline text-4xl italic text-primary">R2,500 <span class="text-xl text-on-surface-variant">– R5,000</span></p>
+          <a href="contact.html" class="mt-6 block bg-primary text-on-primary text-center py-3 font-label text-xs uppercase tracking-widest hover:bg-secondary transition-colors">Order Now</a>
+        </div>
+      </div>
+      <!-- Business Website -->
+      <div class="bg-primary-container p-10 flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute top-4 right-4 bg-secondary text-on-secondary text-[9px] uppercase tracking-widest px-3 py-1 font-bold">Most Popular</div>
+        <div>
+          <h3 class="font-label text-xs uppercase tracking-widest mb-4 text-secondary-fixed-dim">Business Website</h3>
+          <p class="font-headline text-3xl italic text-on-primary mb-6">Your brand, fully online.</p>
+          <ul class="space-y-3 text-sm text-on-primary-container">
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Up to 8 pages</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Custom design system</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>CMS / content editing</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Google Analytics setup</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Full SEO on all pages</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Delivered in 2–3 weeks</li>
+          </ul>
+        </div>
+        <div class="mt-10">
+          <p class="font-label text-[10px] uppercase tracking-widest text-on-primary-container mb-1">Fixed Price</p>
+          <p class="font-headline text-4xl italic text-on-primary">R8,000 <span class="text-xl text-on-primary-container">– R15,000</span></p>
+          <a href="contact.html" class="mt-6 block bg-secondary text-on-secondary text-center py-3 font-label text-xs uppercase tracking-widest hover:bg-secondary-fixed-dim transition-colors">Order Now</a>
+        </div>
+      </div>
+      <!-- E-Commerce -->
+      <div class="bg-surface-container-low p-10 border-t-4 border-outline-variant/30 flex flex-col justify-between">
+        <div>
+          <h3 class="font-label text-xs uppercase tracking-widest mb-4 text-secondary">E-Commerce Store</h3>
+          <p class="font-headline text-3xl italic mb-6">Sell online, beautifully.</p>
+          <ul class="space-y-3 text-sm text-on-surface-variant">
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Product catalogue</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Payment gateway integration</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Inventory management</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Order tracking system</li>
+            <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm mt-0.5">check</span>Delivered in 3–5 weeks</li>
+          </ul>
+        </div>
+        <div class="mt-10">
+          <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Fixed Price</p>
+          <p class="font-headline text-4xl italic text-primary">R15,000 <span class="text-xl text-on-surface-variant">– R30,000</span></p>
+          <a href="contact.html" class="mt-6 block bg-primary text-on-primary text-center py-3 font-label text-xs uppercase tracking-widest hover:bg-secondary transition-colors">Order Now</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-    <div class="bg-white p-12 border-t-4 border-secondary shadow-sm">
-      <div class="mb-8 flex justify-between items-start"><span class="material-symbols-outlined text-secondary" style="font-variation-settings:'opsz' 40;">query_stats</span><span class="text-[10px] uppercase tracking-tighter font-bold opacity-40">Metric Alpha</span></div>
-      <h3 class="font-label uppercase text-xs tracking-widest mb-4">Market Saturation</h3>
-      <div class="h-32 flex items-end space-x-1"><div class="flex-1 bg-surface-container-high h-[20%]"></div><div class="flex-1 bg-surface-container-high h-[40%]"></div><div class="flex-1 bg-secondary h-[65%]"></div><div class="flex-1 bg-surface-container-high h-[30%]"></div><div class="flex-1 bg-primary h-[85%]"></div><div class="flex-1 bg-surface-container-high h-[50%]"></div></div>
-    </div>
-    <div class="bg-primary text-white p-12 flex flex-col justify-between">
-      <div><span class="text-[10px] uppercase tracking-[0.3em] opacity-60 mb-8 block">Active Intelligence</span><h3 class="text-3xl font-headline italic leading-tight">Quantifying the intangible impact of brand equity.</h3></div>
-      <div class="mt-12 flex items-center justify-between"><span class="text-xs font-label opacity-70 italic tracking-widest">Real-time Stream</span><div class="w-3 h-3 rounded-full bg-secondary animate-pulse"></div></div>
-    </div>
-    <div class="bg-surface-container-high p-12 flex flex-col justify-center relative overflow-hidden">
-      <div class="relative z-10"><h3 class="font-label uppercase text-xs tracking-widest mb-6">Growth Trajectory</h3><div class="text-6xl font-headline italic text-primary">+218%</div><p class="text-[10px] uppercase tracking-widest mt-4 opacity-60">Revenue Lift (Q3-Q4)</p></div>
-    </div>
-  </div>
-</div>
 </section>
-<!-- Algorithmic Advantage -->
-<section class="py-32 px-8 md:px-24">
-<div class="grid md:grid-cols-2 gap-24 items-center">
-  <div class="order-2 md:order-1">
-    <img class="w-full aspect-square object-cover grayscale brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmAhmcmFYwL17gnaXKXdiclPLNmLgpp66C-1g7PPs8vc2kzYuZ8d8haH-jsjLGcOK3GFmZTIHGfgvPX5KI-gjDXvRC69Hg9xN9dZ09xmIulbun10EeQm6gHeLx0-Skx7R1IweNXBEs_KltrEcIH7dmyHq6F1PVhqHIuvJ5wZLCyF9YJJqSnQsm--0geLboQWrxSnFE7_iFQbvzMNQZ9cvJFiPrJSwihTIer76TeZMhFI4j1Zxm8NGsX7wL7qmOOXrAnmEm6Jck3o4" alt="Algorithm"/>
-  </div>
-  <div class="order-1 md:order-2">
-    <h2 class="text-5xl font-headline text-primary mb-10 leading-tight">The Algorithmic Advantage</h2>
-    <div class="space-y-12">
-      <div class="border-l border-outline-variant pl-8 py-2"><h4 class="font-label uppercase text-xs tracking-widest text-secondary font-bold mb-2">Machine Learning Lenses</h4><p class="text-on-surface-variant text-sm leading-relaxed">Proprietary models that identify emerging luxury consumer behaviors before they reach the mainstream.</p></div>
-      <div class="border-l border-outline-variant pl-8 py-2"><h4 class="font-label uppercase text-xs tracking-widest text-secondary font-bold mb-2">Sentiment Sculpting</h4><p class="text-on-surface-variant text-sm leading-relaxed">Dynamic creative optimization that adjusts visual tone and copy based on psychological brand affinity triggers.</p></div>
-      <div class="border-l border-outline-variant pl-8 py-2"><h4 class="font-label uppercase text-xs tracking-widest text-secondary font-bold mb-2">Zero-Waste Placement</h4><p class="text-on-surface-variant text-sm leading-relaxed">Eschewing the open web for curated, high-impact environments where your audience already exists.</p></div>
+
+<!-- Digital Marketing -->
+<section class="py-24 px-8 md:px-24 bg-surface-container-low">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-end justify-between mb-16 border-b border-outline-variant/20 pb-8">
+      <div>
+        <span class="font-label text-xs uppercase tracking-widest text-secondary block mb-2">02</span>
+        <h2 class="font-headline text-4xl text-primary">Digital Marketing</h2>
+      </div>
+      <span class="material-symbols-outlined text-4xl text-outline-variant">trending_up</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white p-10 border-l-4 border-secondary">
+        <h3 class="font-label text-xs uppercase tracking-widest mb-2 text-secondary">Social Media Management</h3>
+        <p class="font-headline text-2xl italic mb-4">Stay consistent. Stay relevant.</p>
+        <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Monthly content creation, scheduling, community management and analytics reporting across 2 platforms.</p>
+        <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Monthly Retainer</p>
+        <p class="font-headline text-3xl italic">From R2,000<span class="text-lg text-on-surface-variant">/mo</span></p>
+        <a href="contact.html" class="mt-6 inline-block border-b-2 border-secondary text-secondary font-label text-xs uppercase tracking-widest hover:text-primary hover:border-primary transition-colors">Inquire</a>
+      </div>
+      <div class="bg-white p-10 border-l-4 border-secondary">
+        <h3 class="font-label text-xs uppercase tracking-widest mb-2 text-secondary">SEO Optimization</h3>
+        <p class="font-headline text-2xl italic mb-4">Rank higher. Get found.</p>
+        <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Technical SEO, keyword research, on-page optimization, monthly reporting, and backlink strategy.</p>
+        <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Monthly Retainer</p>
+        <p class="font-headline text-3xl italic">From R3,000<span class="text-lg text-on-surface-variant">/mo</span></p>
+        <a href="contact.html" class="mt-6 inline-block border-b-2 border-secondary text-secondary font-label text-xs uppercase tracking-widest hover:text-primary hover:border-primary transition-colors">Inquire</a>
+      </div>
     </div>
   </div>
-</div>
 </section>
-<!-- Stats -->
-<section class="bg-primary text-white py-32 px-8 md:px-24">
-<div class="max-w-5xl mx-auto text-center">
-  <h2 class="text-4xl md:text-6xl font-headline italic mb-20">Global Scale. Measured Results.</h2>
-  <div class="grid md:grid-cols-3 gap-16 border-y border-on-primary-container py-16">
-    <div><div class="text-5xl font-headline text-secondary-fixed-dim mb-4">12.4x</div><p class="text-[10px] uppercase tracking-[0.2em] opacity-60">Average ROAS for Ultra-Luxury</p></div>
-    <div><div class="text-5xl font-headline text-secondary-fixed-dim mb-4">$85M+</div><p class="text-[10px] uppercase tracking-[0.2em] opacity-60">Client Revenue Managed</p></div>
-    <div><div class="text-5xl font-headline text-secondary-fixed-dim mb-4">42</div><p class="text-[10px] uppercase tracking-[0.2em] opacity-60">Global Markets Penetrated</p></div>
+
+<!-- Custom Quote Services -->
+<section class="py-24 px-8 md:px-24 bg-surface">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-end justify-between mb-16 border-b border-outline-variant/20 pb-8">
+      <div>
+        <span class="font-label text-xs uppercase tracking-widest text-secondary block mb-2">03</span>
+        <h2 class="font-headline text-4xl text-primary">Custom Builds</h2>
+      </div>
+      <span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Priced per project</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="group p-8 bg-surface-container-low hover:bg-primary transition-all duration-500 cursor-pointer">
+        <span class="material-symbols-outlined text-secondary group-hover:text-secondary-fixed-dim transition-colors mb-6 block">phone_iphone</span>
+        <h3 class="font-headline text-xl mb-3 group-hover:text-on-primary transition-colors">Mobile App</h3>
+        <p class="text-sm text-on-surface-variant group-hover:text-on-primary-container transition-colors leading-relaxed">Android & iOS apps. Cross-platform or native. MVP to enterprise scale.</p>
+        <p class="mt-6 font-label text-[10px] uppercase tracking-widest text-secondary group-hover:text-secondary-fixed-dim transition-colors">Get a Quote →</p>
+      </div>
+      <div class="group p-8 bg-surface-container-low hover:bg-primary transition-all duration-500 cursor-pointer">
+        <span class="material-symbols-outlined text-secondary group-hover:text-secondary-fixed-dim transition-colors mb-6 block">terminal</span>
+        <h3 class="font-headline text-xl mb-3 group-hover:text-on-primary transition-colors">Custom Software</h3>
+        <p class="text-sm text-on-surface-variant group-hover:text-on-primary-container transition-colors leading-relaxed">Bespoke desktop or web applications, automation systems and internal tools.</p>
+        <p class="mt-6 font-label text-[10px] uppercase tracking-widest text-secondary group-hover:text-secondary-fixed-dim transition-colors">Get a Quote →</p>
+      </div>
+      <div class="group p-8 bg-surface-container-low hover:bg-primary transition-all duration-500 cursor-pointer">
+        <span class="material-symbols-outlined text-secondary group-hover:text-secondary-fixed-dim transition-colors mb-6 block">hub</span>
+        <h3 class="font-headline text-xl mb-3 group-hover:text-on-primary transition-colors">Business Systems</h3>
+        <p class="text-sm text-on-surface-variant group-hover:text-on-primary-container transition-colors leading-relaxed">CRM, ERP, inventory, HR and workflow management systems built to spec.</p>
+        <p class="mt-6 font-label text-[10px] uppercase tracking-widest text-secondary group-hover:text-secondary-fixed-dim transition-colors">Get a Quote →</p>
+      </div>
+      <div class="group p-8 bg-surface-container-low hover:bg-primary transition-all duration-500 cursor-pointer">
+        <span class="material-symbols-outlined text-secondary group-hover:text-secondary-fixed-dim transition-colors mb-6 block">campaign</span>
+        <h3 class="font-headline text-xl mb-3 group-hover:text-on-primary transition-colors">Marketing Campaign</h3>
+        <p class="text-sm text-on-surface-variant group-hover:text-on-primary-container transition-colors leading-relaxed">Google Ads, Meta campaigns, influencer coordination and full reporting dashboards.</p>
+        <p class="mt-6 font-label text-[10px] uppercase tracking-widest text-secondary group-hover:text-secondary-fixed-dim transition-colors">Get a Quote →</p>
+      </div>
+      <div class="group p-8 bg-surface-container-low hover:bg-primary transition-all duration-500 cursor-pointer">
+        <span class="material-symbols-outlined text-secondary group-hover:text-secondary-fixed-dim transition-colors mb-6 block">palette</span>
+        <h3 class="font-headline text-xl mb-3 group-hover:text-on-primary transition-colors">Brand Identity</h3>
+        <p class="text-sm text-on-surface-variant group-hover:text-on-primary-container transition-colors leading-relaxed">Logo, typography, colour system, brand guidelines and full design kit.</p>
+        <p class="mt-6 font-label text-[10px] uppercase tracking-widest text-secondary group-hover:text-secondary-fixed-dim transition-colors">Get a Quote →</p>
+      </div>
+      <div class="group p-8 bg-surface-container-low hover:bg-primary transition-all duration-500 cursor-pointer">
+        <span class="material-symbols-outlined text-secondary group-hover:text-secondary-fixed-dim transition-colors mb-6 block">api</span>
+        <h3 class="font-headline text-xl mb-3 group-hover:text-on-primary transition-colors">API Development</h3>
+        <p class="text-sm text-on-surface-variant group-hover:text-on-primary-container transition-colors leading-relaxed">RESTful or GraphQL APIs, third-party integrations, webhooks and microservices.</p>
+        <p class="mt-6 font-label text-[10px] uppercase tracking-widest text-secondary group-hover:text-secondary-fixed-dim transition-colors">Get a Quote →</p>
+      </div>
+      <div class="group p-8 bg-surface-container-low hover:bg-primary transition-all duration-500 cursor-pointer">
+        <span class="material-symbols-outlined text-secondary group-hover:text-secondary-fixed-dim transition-colors mb-6 block">manage_accounts</span>
+        <h3 class="font-headline text-xl mb-3 group-hover:text-on-primary transition-colors">Web App</h3>
+        <p class="text-sm text-on-surface-variant group-hover:text-on-primary-container transition-colors leading-relaxed">SaaS platforms, portals, dashboards and complex web applications with full backend.</p>
+        <p class="mt-6 font-label text-[10px] uppercase tracking-widest text-secondary group-hover:text-secondary-fixed-dim transition-colors">Get a Quote →</p>
+      </div>
+      <div class="group p-8 bg-surface-container-low hover:bg-primary transition-all duration-500 cursor-pointer">
+        <span class="material-symbols-outlined text-secondary group-hover:text-secondary-fixed-dim transition-colors mb-6 block">support_agent</span>
+        <h3 class="font-headline text-xl mb-3 group-hover:text-on-primary transition-colors">Maintenance & Support</h3>
+        <p class="text-sm text-on-surface-variant group-hover:text-on-primary-container transition-colors leading-relaxed">Ongoing site maintenance, updates, hosting management and priority support.</p>
+        <p class="mt-6 font-label text-[10px] uppercase tracking-widest text-secondary group-hover:text-secondary-fixed-dim transition-colors">Get a Quote →</p>
+      </div>
+    </div>
+    <div class="mt-16 text-center">
+      <a href="contact.html" class="inline-block bg-secondary text-on-secondary px-12 py-4 font-label text-xs uppercase tracking-widest hover:bg-primary transition-colors">Request a Custom Quote</a>
+    </div>
   </div>
-</div>
 </section>
+
+<!-- Process -->
+<section class="bg-primary text-on-primary py-32 px-8 md:px-24">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-4xl md:text-6xl font-headline italic mb-20 text-center">How it works.</h2>
+    <div class="grid md:grid-cols-4 gap-12">
+      <div class="text-center"><div class="text-5xl font-headline text-secondary mb-4">01</div><h4 class="font-label uppercase tracking-widest text-xs mb-3">Discovery</h4><p class="text-sm text-on-primary-container leading-relaxed">We talk about your goals, timeline and budget. I give you a clear proposal within 48 hours.</p></div>
+      <div class="text-center"><div class="text-5xl font-headline text-secondary mb-4">02</div><h4 class="font-label uppercase tracking-widest text-xs mb-3">Design</h4><p class="text-sm text-on-primary-container leading-relaxed">UI mockups and prototype. You review and approve before a single line of code is written.</p></div>
+      <div class="text-center"><div class="text-5xl font-headline text-secondary mb-4">03</div><h4 class="font-label uppercase tracking-widest text-xs mb-3">Build</h4><p class="text-sm text-on-primary-container leading-relaxed">Development with regular check-ins. You see progress, not just a final result.</p></div>
+      <div class="text-center"><div class="text-5xl font-headline text-secondary mb-4">04</div><h4 class="font-label uppercase tracking-widest text-xs mb-3">Launch</h4><p class="text-sm text-on-primary-container leading-relaxed">Deployment, testing, handover and 30-day post-launch support included on all projects.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="py-32 px-8 text-center max-w-screen-md mx-auto">
-<h2 class="font-headline text-4xl mb-12 italic">Ready to grow your presence?</h2>
-<a class="inline-block bg-secondary text-on-secondary px-12 py-4 font-label text-xs uppercase tracking-widest hover:bg-primary transition-colors" href="contact.html">Start a Project</a>
+  <h2 class="font-headline text-4xl mb-6 italic">Not sure what you need?</h2>
+  <p class="text-on-surface-variant mb-12 text-lg">Book a free 30-minute consultation and I'll help you figure out the right approach for your budget and goals.</p>
+  <a class="inline-block bg-secondary text-on-secondary px-12 py-4 font-label text-xs uppercase tracking-widest hover:bg-primary transition-colors" href="contact.html">Book Free Consultation</a>
 </section>
 </main>
-<footer class="bg-[#000000] w-full px-8 py-12 flex flex-col md:flex-row justify-between items-center max-w-none">
-<span class="text-lg font-serif text-[#fcf9f8] uppercase">CENTURY CAPITAL</span>
-<div class="flex space-x-8 my-8 md:my-0">
-  <a class="font-label text-[10px] uppercase tracking-[0.2em] text-[#fcf9f8] opacity-60 hover:opacity-100 hover:text-[#fed488]" href="#">Privacy Policy</a>
-  <a class="font-label text-[10px] uppercase tracking-[0.2em] text-[#fcf9f8] opacity-60 hover:opacity-100 hover:text-[#fed488]" href="#">Terms of Service</a>
-  <a class="font-label text-[10px] uppercase tracking-[0.2em] text-[#fcf9f8] opacity-60 hover:opacity-100 hover:text-[#fed488]" href="#">LinkedIn</a>
-</div>
-<p class="font-label text-[10px] uppercase tracking-[0.2em] text-[#fcf9f8] opacity-40">© 2024 Century Capital. All rights reserved.</p>
+<footer class="bg-[#000000] w-full px-8 py-12 flex flex-col md:flex-row justify-between items-center">
+  <span class="text-lg font-serif text-[#fcf9f8] uppercase mb-6 md:mb-0">CENTURY CAPITAL</span>
+  <div class="flex space-x-8 mb-6 md:mb-0">
+    <a class="font-label text-[10px] uppercase tracking-[0.2em] text-[#fcf9f8] opacity-60 hover:opacity-100 hover:text-[#fed488]" href="index.html">Portfolio</a>
+    <a class="font-label text-[10px] uppercase tracking-[0.2em] text-[#fcf9f8] opacity-60 hover:opacity-100 hover:text-[#fed488]" href="about.html">About</a>
+    <a class="font-label text-[10px] uppercase tracking-[0.2em] text-[#fcf9f8] opacity-60 hover:opacity-100 hover:text-[#fed488]" href="contact.html">Contact</a>
+  </div>
+  <p class="font-label text-[10px] uppercase tracking-[0.2em] text-[#fcf9f8] opacity-40">© 2026 Century Capital.</p>
 </footer>
 </body>
 </html>

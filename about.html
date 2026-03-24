@@ -3,153 +3,173 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About the Firm | Century Capital</title>
-<meta name="description" content="A century of visionary stewardship. Learn about Century Capital's leadership, philosophy, and global presence."/>
+<title>About | Century Capital</title>
+<meta name="description" content="We are Century Capital — a young, bold digital studio founded by Dumisani Baloyi in 2024. We build websites, apps, software systems and digital brands."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
   tailwind.config = {
     darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "background": "#fcf9f8","on-secondary": "#ffffff","surface-container-high": "#eae7e7","on-tertiary": "#ffffff","tertiary-fixed-dim": "#dec482","on-primary-fixed": "#1c1b1b","on-secondary-fixed-variant": "#5d4201","surface-tint": "#5f5e5e","on-tertiary-fixed-variant": "#56450e","on-background": "#1c1b1b","inverse-surface": "#313030","surface-variant": "#e5e2e1","secondary-container": "#fed488","inverse-primary": "#c8c6c5","on-secondary-fixed": "#261900","primary-fixed": "#e5e2e1","primary": "#000000","on-surface-variant": "#444748","on-primary-fixed-variant": "#474646","primary-fixed-dim": "#c8c6c5","tertiary": "#000000","surface-container-low": "#f6f3f2","surface-container-lowest": "#ffffff","outline-variant": "#c4c7c7","surface": "#fcf9f8","primary-container": "#1c1b1b","tertiary-container": "#241a00","surface-dim": "#dcd9d9","inverse-on-surface": "#f3f0ef","surface-container": "#f0eded","secondary-fixed-dim": "#e9c176","error-container": "#ffdad6","on-surface": "#1c1b1b","on-error-container": "#93000a","on-error": "#ffffff","tertiary-fixed": "#fbe09b","surface-container-highest": "#e5e2e1","error": "#ba1a1a","on-tertiary-container": "#978246","on-secondary-container": "#785a1a","on-primary-container": "#858383","on-tertiary-fixed": "#241a00","on-primary": "#ffffff","outline": "#747878","secondary": "#775a19","surface-bright": "#fcf9f8","secondary-fixed": "#ffdea5"
-        },
-        fontFamily: { "headline": ["Newsreader","serif"], "body": ["Manrope","sans-serif"], "label": ["Manrope","sans-serif"] },
-        borderRadius: {"DEFAULT": "0px", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-      },
-    },
+    theme: { extend: { colors: { "background":"#fcf9f8","on-secondary":"#ffffff","surface-container-high":"#eae7e7","on-tertiary":"#ffffff","tertiary-fixed-dim":"#dec482","on-primary-fixed":"#1c1b1b","on-secondary-fixed-variant":"#5d4201","surface-tint":"#5f5e5e","on-tertiary-fixed-variant":"#56450e","on-background":"#1c1b1b","inverse-surface":"#313030","surface-variant":"#e5e2e1","secondary-container":"#fed488","inverse-primary":"#c8c6c5","on-secondary-fixed":"#261900","primary-fixed":"#e5e2e1","primary":"#000000","on-surface-variant":"#444748","on-primary-fixed-variant":"#474646","primary-fixed-dim":"#c8c6c5","tertiary":"#000000","surface-container-low":"#f6f3f2","surface-container-lowest":"#ffffff","outline-variant":"#c4c7c7","surface":"#fcf9f8","primary-container":"#1c1b1b","tertiary-container":"#241a00","surface-dim":"#dcd9d9","inverse-on-surface":"#f3f0ef","surface-container":"#f0eded","secondary-fixed-dim":"#e9c176","error-container":"#ffdad6","on-surface":"#1c1b1b","on-error-container":"#93000a","on-error":"#ffffff","tertiary-fixed":"#fbe09b","surface-container-highest":"#e5e2e1","error":"#ba1a1a","on-tertiary-container":"#978246","on-secondary-container":"#785a1a","on-primary-container":"#858383","on-tertiary-fixed":"#241a00","on-primary":"#ffffff","outline":"#747878","secondary":"#775a19","surface-bright":"#fcf9f8","secondary-fixed":"#ffdea5" }, fontFamily: { "headline":["Newsreader","serif"], "body":["Manrope","sans-serif"], "label":["Manrope","sans-serif"] }, borderRadius:{"DEFAULT":"0px","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"} } }
   }
 </script>
 <style>
   .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
   .serif-italic { font-family: 'Newsreader'; font-style: italic; }
+  /* Mobile nav */
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: flex; }
 </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
-<!-- TopNavBar -->
-<nav class="fixed top-0 z-50 flex justify-between items-center w-full px-8 py-6 max-w-none bg-[#fcf9f8] dark:bg-[#1c1b1b]">
-<div class="text-2xl font-serif tracking-tighter text-[#1c1b1b] dark:text-[#fcf9f8]">CENTURY CAPITAL</div>
-<div class="hidden md:flex items-center gap-12">
-  <a class="text-[#1c1b1b] dark:text-[#fcf9f8] opacity-70 hover:opacity-100 transition-opacity font-sans uppercase tracking-[0.05em] text-xs" href="index.html">Projects</a>
-  <a class="text-[#1c1b1b] dark:text-[#fcf9f8] opacity-70 hover:opacity-100 transition-opacity font-sans uppercase tracking-[0.05em] text-xs" href="services.html">Services</a>
-  <a class="text-[#775a19] dark:text-[#fed488] border-b-2 border-[#775a19] pb-1 font-sans uppercase tracking-[0.05em] text-xs" href="about.html">About</a>
-  <a class="text-[#1c1b1b] dark:text-[#fcf9f8] opacity-70 hover:opacity-100 transition-opacity font-sans uppercase tracking-[0.05em] text-xs" href="contact.html">Contact</a>
-</div>
-<a href="contact.html" class="bg-primary text-on-primary px-8 py-2 font-sans uppercase tracking-[0.05em] text-xs active:scale-95 transition-transform">Inquire</a>
+<!-- Nav -->
+<nav class="fixed top-0 z-50 flex flex-col w-full bg-[#fcf9f8] dark:bg-[#1c1b1b] border-b border-outline-variant/10">
+  <div class="flex justify-between items-center w-full px-8 py-6 max-w-none">
+    <a href="index.html" class="text-2xl font-serif tracking-tighter text-[#1c1b1b]">CENTURY CAPITAL</a>
+    <div class="hidden md:flex items-center gap-12">
+      <a class="text-[#1c1b1b] opacity-70 hover:opacity-100 font-sans uppercase tracking-[0.05em] text-xs" href="index.html">Portfolio</a>
+      <a class="text-[#1c1b1b] opacity-70 hover:opacity-100 font-sans uppercase tracking-[0.05em] text-xs" href="services.html">Services</a>
+      <a class="text-[#775a19] border-b-2 border-[#775a19] pb-1 font-sans uppercase tracking-[0.05em] text-xs" href="about.html">About</a>
+      <a class="text-[#1c1b1b] opacity-70 hover:opacity-100 font-sans uppercase tracking-[0.05em] text-xs" href="contact.html">Contact</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:block bg-primary text-on-primary px-8 py-2 font-sans uppercase tracking-[0.05em] text-xs active:scale-95 transition-transform">Inquire</a>
+      <button id="burger" class="md:hidden flex flex-col gap-1.5 p-2" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <span class="w-6 h-px bg-on-surface block"></span>
+        <span class="w-6 h-px bg-on-surface block"></span>
+        <span class="w-6 h-px bg-on-surface block"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="flex-col px-8 pb-6 gap-6 bg-[#fcf9f8]">
+    <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b]/70" href="index.html">Portfolio</a>
+    <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b]/70" href="services.html">Services</a>
+    <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#775a19] font-bold" href="about.html">About</a>
+    <a class="font-sans uppercase tracking-[0.05em] text-xs text-[#1c1b1b]/70" href="contact.html">Contact</a>
+    <a href="contact.html" class="inline-block bg-primary text-on-primary px-8 py-2 font-sans uppercase tracking-[0.05em] text-xs w-fit">Inquire</a>
+  </div>
 </nav>
 <main class="pt-32">
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="px-8 mb-32">
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
-  <div class="md:col-span-8">
-    <span class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-6 block">Est. 1924</span>
-    <h1 class="font-headline text-6xl md:text-8xl leading-tight tracking-tighter text-on-surface">A century of <span class="serif-italic">visionary</span> stewardship.</h1>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+    <div class="md:col-span-8">
+      <span class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-6 block">Est. 2024 · South Africa</span>
+      <h1 class="font-headline text-6xl md:text-8xl leading-tight tracking-tighter text-on-surface">We build things that <span class="serif-italic">matter.</span></h1>
+    </div>
+    <div class="md:col-span-4 pb-4">
+      <p class="font-body text-lg leading-relaxed text-on-surface-variant">Century Capital is a digital studio that turns ambitious ideas into refined, functional experiences — from websites and apps to full software systems.</p>
+    </div>
   </div>
-  <div class="md:col-span-4 pb-4">
-    <p class="font-body text-lg leading-relaxed text-on-surface-variant">Defining the intersection of legacy and innovation through a disciplined lens of architectural intelligence and global impact.</p>
-  </div>
-</div>
 </section>
-<!-- The Century Manifesto -->
+
+<!-- The Founder -->
 <section class="bg-primary-container text-on-primary py-32 px-8 overflow-hidden relative">
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 relative z-10">
-  <div>
-    <h2 class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-12">The Century Manifesto</h2>
-    <div class="pl-8 border-l-4 border-secondary">
-      <p class="font-headline italic text-4xl md:text-5xl leading-snug text-surface">"True wealth is not merely accumulated; it is engineered to withstand the erosion of time and the volatility of progress."</p>
-    </div>
-  </div>
-  <div class="flex flex-col justify-center space-y-8">
-    <p class="text-on-primary-container text-xl font-light leading-relaxed">At Century Capital, we view every investment as a structural component of a larger legacy. We reject the ephemeral trends of the modern market in favor of enduring foundations.</p>
-    <div class="flex gap-4 items-center"><div class="w-12 h-[1px] bg-secondary"></div><span class="font-label text-[10px] uppercase tracking-widest text-secondary">View our core principles</span></div>
-  </div>
-</div>
-</section>
-<!-- Leadership -->
-<section class="py-32 px-8 bg-surface-container-low">
-<div class="max-w-7xl mx-auto">
-  <div class="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-outline-variant/30 pb-12">
-    <h2 class="font-headline text-5xl max-w-lg">The minds behind the <span class="serif-italic">monolith.</span></h2>
-    <p class="font-label text-xs uppercase tracking-widest text-secondary mt-8 md:mt-0">Executive Leadership Team</p>
-  </div>
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-    <div class="group">
-      <div class="aspect-[3/4] mb-8 overflow-hidden bg-surface-container-highest">
-        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmKPXVLIc8NbkMFjqQhyi3qM16CFNi3EYLQnahsLEk2EJuHePssD0T2W35CJsXcYiO6qfvgHXsRSkj7kS0ISbBR-55zEoOcF_E-hYdBKCwLaLoHDE8SpvkZIfeI6NAr4Q4OrCoYxjP9NPRDmb0fUp9lpjUanNQx5nNPU2VFCyj8pkWRKm6l4wE4aF6Y2kCbQ3enQC0kBCuySz1ySmvoQWdFfO_C5Zfagu1ezT_UY0CkBjTznqQBJmAWABMfdv19gOETNwxTMRH3QE" alt="Julian Thorne"/>
-      </div>
-      <h4 class="font-headline text-2xl mb-1">Julian Thorne</h4>
-      <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-4">Managing Director &amp; Chairman</p>
-      <p class="text-sm text-on-surface-variant leading-relaxed">Formerly of Goldman Sachs and the IMF, Julian brings 40 years of structural risk expertise.</p>
-    </div>
-    <div class="group">
-      <div class="aspect-[3/4] mb-8 overflow-hidden bg-surface-container-highest">
-        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZaqDeJnv351iu25MK3ccMJL-h7vJufQ8KQWVP5Gkp3IALFT7lqhrr4N8dm-Ox5AWfJcmY3nK6YFjyhXK2iKsJ9uwEMkO8aBfgJp0I02Znobi-q4UOYSB7b9RLllRpO8tvGQs4CzR05xBhxw6zZzheTVWD472YO6jVUS374nuzRZPXhpCT_KmfeXLNa86Hjr920nHc-vm6BqcdJ3zTe4qEDsgpSGPZcBXjJ5yRzfJLxePE6AKcb9jkyuGyOhHM_9j5BPSlH3lKUsQ" alt="Elena Moretti"/>
-      </div>
-      <h4 class="font-headline text-2xl mb-1">Elena Moretti</h4>
-      <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-4">Head of Global Reach</p>
-      <p class="text-sm text-on-surface-variant leading-relaxed">Architect of our cross-border liquidity protocols and European expansion strategies.</p>
-    </div>
-    <div class="group">
-      <div class="aspect-[3/4] mb-8 overflow-hidden bg-surface-container-highest">
-        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx4fSQ6h_ooAR5gnhbI75B3V3CMSxuhpl2FelgIXjNkYIjchXrUPA52zz8qHWWOYH975ihW3B_IWnQrb3GwsyjIjBy4kKEWNJ6eD0h9Hr4salDIlMdzQ7MydfS9gbO9jKM1ygCA1ZRNyuV36poW537LTkO2PPeyVrspQ798L1xkT6ok5tu6CPeYehcJKu12Qe4SfIJxE0yg7a59PXzG38le89zpXyUub4iAMfE_3TEGTJG9dtbysAXSXGDlT7e52HLP13vBxFf9j0" alt="Dr. Alistair Vance"/>
-      </div>
-      <h4 class="font-headline text-2xl mb-1">Dr. Alistair Vance</h4>
-      <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-4">Chief Innovation Officer</p>
-      <p class="text-sm text-on-surface-variant leading-relaxed">Pioneer in quantitative easing models and algorithmic asset allocation.</p>
-    </div>
-    <div class="group">
-      <div class="aspect-[3/4] mb-8 overflow-hidden bg-surface-container-highest">
-        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdkFpyiAaADgqaRSL7dHVGdKZwMY86d7wGSzBRMbefqQQYUYG9SYNpfAu46HiYwz-skSHVCclxyHMJQmz_8b4BFfNct5toAD0k9x6eHStL0hvmcC4AmVGOJ9OSSFIK9iIGwq43ZPZmQx3f3PvZY8pCd5gQGN8zb891FGdpIBElRGHqYL7We6ACKQEyxFJwc_05HS_OVlHXJmETCE4WMUinBXYB8AU2m2NIJrgyL_OgRNHk--Gp48FtB8FD2OdFqldBjGcB0YVF6-Y" alt="Sarah Whitlock"/>
-      </div>
-      <h4 class="font-headline text-2xl mb-1">Sarah Whitlock</h4>
-      <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-4">Chief Ethics &amp; Compliance</p>
-      <p class="text-sm text-on-surface-variant leading-relaxed">Ensuring our legacy remains unblemished through rigorous institutional oversight.</p>
-    </div>
-  </div>
-</div>
-</section>
-<!-- Global Reach -->
-<section class="py-32 bg-primary overflow-hidden">
-<div class="max-w-7xl mx-auto px-8">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 relative z-10 items-center">
     <div>
-      <h2 class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-8">Global Reach</h2>
-      <h3 class="font-headline text-5xl text-on-primary mb-12 leading-tight">Connected by <span class="serif-italic">gravity</span>, not just geography.</h3>
-      <div class="space-y-12">
-        <div class="flex gap-8 group"><span class="font-headline text-4xl text-secondary opacity-50 group-hover:opacity-100 transition-opacity">01</span><div><h4 class="text-on-primary text-xl mb-2">London · Mayfair</h4><p class="text-on-primary-container text-sm">Our global headquarters, managing European liquidity and the Atlantic bridge.</p></div></div>
-        <div class="flex gap-8 group"><span class="font-headline text-4xl text-secondary opacity-50 group-hover:opacity-100 transition-opacity">02</span><div><h4 class="text-on-primary text-xl mb-2">Singapore · Marina Bay</h4><p class="text-on-primary-container text-sm">The gateway to the emerging wealth corridors of Southeast Asia.</p></div></div>
-        <div class="flex gap-8 group"><span class="font-headline text-4xl text-secondary opacity-50 group-hover:opacity-100 transition-opacity">03</span><div><h4 class="text-on-primary text-xl mb-2">New York · Hudson Yards</h4><p class="text-on-primary-container text-sm">The epicenter of our North American industrial and technological holdings.</p></div></div>
+      <span class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-8 block">The Founder</span>
+      <h2 class="font-headline italic text-5xl md:text-6xl leading-snug text-surface mb-8">Dumisani Baloyi</h2>
+      <div class="h-px w-24 bg-secondary mb-8"></div>
+      <p class="text-on-primary-container text-xl font-light leading-relaxed mb-6">I'm a 23-year-old web and software developer based in South Africa. I started Century Capital in 2024 with a clear mission: to bring world-class digital craftsmanship to businesses that deserve more than average.</p>
+      <p class="text-on-primary-container text-lg font-light leading-relaxed">Every project I take on is treated with the precision of an engineer and the eye of a designer. From pixel-perfect frontends to robust backend systems, I build end-to-end.</p>
+      <div class="mt-12 flex gap-6 flex-wrap">
+        <a href="contact.html" class="inline-block bg-secondary text-on-secondary px-10 py-3 font-label text-xs uppercase tracking-widest hover:bg-secondary-container hover:text-on-secondary-container transition-all">Work With Me</a>
+        <a href="index.html" class="inline-block border-b-2 border-secondary text-secondary px-4 py-3 font-label text-xs uppercase tracking-widest hover:text-surface transition-all">View Portfolio</a>
       </div>
     </div>
-    <div class="relative h-[600px] bg-primary-container">
-      <img class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrt7j-FxKXfICUOl9YWczkxCIGPE6AZZkCGvbbyguDx3OdPb0ACpn4YftcGE5ooUryoDB1yEX11m2_iEPziIuEE2H_Nr8KudT9cjpOEv2ga_XnsZwg4ZWvHWBawSezpVHsKUkQNAX2KLzzChXM1ImeCBTlfY6QEI6lHALJ9zrBqIxw8k5Mc_KRoxReAd4ZKssZma5jSVc8A_O665PS6HsMxsUFefnai97lLEvuNQImi4lvHycQXRgRaaLu7E1JpeSn4aaPk0Tcc6YMxO2k" alt="Global city skyline"/>
-      <div class="absolute inset-0 flex items-center justify-center"><div class="p-8 bg-secondary/10 backdrop-blur-xl border border-secondary/20 text-center max-w-xs"><p class="text-on-primary font-label text-[10px] uppercase tracking-widest mb-4">Live Operational Map</p><p class="font-headline italic text-xl text-secondary-fixed-dim">Currently monitoring $14.2B in cross-border flows.</p></div></div>
+    <div class="relative">
+      <div class="aspect-[4/5] bg-surface-container-high overflow-hidden relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-primary flex items-center justify-center">
+          <div class="text-center p-12">
+            <div class="text-8xl font-headline italic text-secondary mb-4">DB</div>
+            <p class="font-label text-xs uppercase tracking-widest text-on-primary opacity-60">Dumisani Baloyi</p>
+            <p class="font-label text-xs uppercase tracking-widest text-secondary mt-2">Founder & Developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-secondary text-on-secondary p-8 max-w-xs hidden lg:block">
+        <p class="font-label text-xs uppercase tracking-widest mb-2 opacity-80">Core Values</p>
+        <p class="text-xl font-serif leading-snug italic">"Precision. Craft. Permanence."</p>
+      </div>
     </div>
   </div>
-</div>
 </section>
-<!-- Final CTA -->
-<section class="py-48 px-8 bg-surface text-center">
-<div class="max-w-3xl mx-auto">
-  <h2 class="font-headline text-5xl md:text-7xl mb-12 tracking-tighter">Secure your <span class="serif-italic">place</span> in the next century.</h2>
-  <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-    <a href="contact.html" class="bg-primary text-on-primary px-12 py-4 font-sans uppercase tracking-[0.1em] text-sm w-full md:w-auto text-center">Request Private Consultation</a>
-    <a href="index.html" class="border-b-2 border-secondary text-secondary px-6 py-4 font-sans uppercase tracking-[0.1em] text-sm hover:text-on-surface hover:border-on-surface transition-colors">Our Portfolio</a>
+
+<!-- What We Do -->
+<section class="py-32 px-8 bg-surface-container-low">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-outline-variant/30 pb-12">
+      <h2 class="font-headline text-5xl max-w-lg">What we <span class="serif-italic">do.</span></h2>
+      <p class="font-label text-xs uppercase tracking-widest text-secondary mt-8 md:mt-0">Our Disciplines</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="group">
+        <div class="w-12 h-px bg-secondary mb-8"></div>
+        <h3 class="font-headline text-2xl mb-4">Web Development</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Landing pages, business websites, e-commerce stores, and complex web applications — all built with performance and precision at the core.</p>
+      </div>
+      <div class="group">
+        <div class="w-12 h-px bg-secondary mb-8"></div>
+        <h3 class="font-headline text-2xl mb-4">Software & Systems</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Custom software, business management systems, APIs, dashboards, and automation tools designed to streamline operations.</p>
+      </div>
+      <div class="group">
+        <div class="w-12 h-px bg-secondary mb-8"></div>
+        <h3 class="font-headline text-2xl mb-4">App Development</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Cross-platform mobile applications for Android and iOS. From MVP concepts to fully-featured consumer or enterprise apps.</p>
+      </div>
+      <div class="group">
+        <div class="w-12 h-px bg-secondary mb-8"></div>
+        <h3 class="font-headline text-2xl mb-4">Digital Marketing</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">SEO, social media management, Google Ads, and strategic content — driving measurable growth for brands that want to be found.</p>
+      </div>
+      <div class="group">
+        <div class="w-12 h-px bg-secondary mb-8"></div>
+        <h3 class="font-headline text-2xl mb-4">Brand Identity</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Visual identity, logo design, brand guidelines, and design systems that establish a consistent, memorable presence.</p>
+      </div>
+      <div class="group">
+        <div class="w-12 h-px bg-secondary mb-8"></div>
+        <h3 class="font-headline text-2xl mb-4">Design & UX</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">User interface design, wireframing, prototype testing, and UX consulting to ensure every product is intuitive and impactful.</p>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<!-- Stats -->
+<section class="py-32 px-8 bg-primary text-on-primary">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl md:text-6xl font-headline italic mb-20">Built to deliver.</h2>
+    <div class="grid md:grid-cols-3 gap-16 border-y border-on-primary-container py-16">
+      <div><div class="text-5xl font-headline text-secondary-fixed-dim mb-4">2024</div><p class="text-[10px] uppercase tracking-[0.2em] opacity-60">Year Founded</p></div>
+      <div><div class="text-5xl font-headline text-secondary-fixed-dim mb-4">10+</div><p class="text-[10px] uppercase tracking-[0.2em] opacity-60">Projects Delivered</p></div>
+      <div><div class="text-5xl font-headline text-secondary-fixed-dim mb-4">100%</div><p class="text-[10px] uppercase tracking-[0.2em] opacity-60">Client Satisfaction Goal</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-48 px-8 bg-surface text-center">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="font-headline text-5xl md:text-7xl mb-12 tracking-tighter">Ready to build <span class="serif-italic">something great?</span></h2>
+    <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+      <a href="contact.html" class="bg-primary text-on-primary px-12 py-4 font-sans uppercase tracking-[0.1em] text-sm w-full md:w-auto text-center">Start a Project</a>
+      <a href="services.html" class="border-b-2 border-secondary text-secondary px-6 py-4 font-sans uppercase tracking-[0.1em] text-sm hover:text-on-surface hover:border-on-surface transition-colors">View Services & Pricing</a>
+    </div>
+  </div>
 </section>
 </main>
 <!-- Footer -->
 <footer class="w-full px-12 py-16 flex flex-col md:flex-row justify-between items-center bg-[#1c1b1b]">
-<div class="text-lg font-serif italic text-[#fcf9f8] mb-8 md:mb-0">Century Capital</div>
-<div class="flex flex-wrap justify-center gap-12 mb-8 md:mb-0">
-  <a class="font-sans text-xs uppercase tracking-widest text-[#eae7e7] opacity-50 hover:text-[#775a19] transition-colors" href="#">Privacy Policy</a>
-  <a class="font-sans text-xs uppercase tracking-widest text-[#eae7e7] opacity-50 hover:text-[#775a19] transition-colors" href="#">Terms of Service</a>
-  <a class="font-sans text-xs uppercase tracking-widest text-[#eae7e7] opacity-50 hover:text-[#775a19] transition-colors" href="#">Instagram</a>
-</div>
-<div class="font-sans text-xs uppercase tracking-widest text-[#eae7e7] opacity-50">© 2024 Century Capital. All rights reserved.</div>
+  <div class="text-lg font-serif italic text-[#fcf9f8] mb-8 md:mb-0">Century Capital</div>
+  <div class="flex flex-wrap justify-center gap-12 mb-8 md:mb-0">
+    <a class="font-sans text-xs uppercase tracking-widest text-[#eae7e7] opacity-50 hover:text-[#775a19] transition-colors" href="index.html">Portfolio</a>
+    <a class="font-sans text-xs uppercase tracking-widest text-[#eae7e7] opacity-50 hover:text-[#775a19] transition-colors" href="services.html">Services</a>
+    <a class="font-sans text-xs uppercase tracking-widest text-[#eae7e7] opacity-50 hover:text-[#775a19] transition-colors" href="contact.html">Contact</a>
+  </div>
+  <div class="font-sans text-xs uppercase tracking-widest text-[#eae7e7] opacity-50">© 2026 Century Capital.</div>
 </footer>
 </body>
 </html>
