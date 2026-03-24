@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Century Capital</title>
+<meta name="description" content="Get in touch with Century Capital. Offices in Oslo and New York. Start your next project with us."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode:"class",
+    theme:{extend:{colors:{"error-container":"#ffdad6","surface-container-low":"#f6f3f2","on-primary-fixed":"#1c1b1b","on-tertiary":"#ffffff","tertiary-fixed-dim":"#dec482","on-tertiary-fixed":"#241a00","outline":"#747878","on-secondary-container":"#785a1a","secondary-fixed-dim":"#e9c176","secondary-fixed":"#ffdea5","on-error":"#ffffff","surface-container":"#f0eded","on-surface":"#1c1b1b","surface":"#fcf9f8","tertiary-fixed":"#fbe09b","on-tertiary-fixed-variant":"#56450e","surface-dim":"#dcd9d9","primary-fixed-dim":"#c8c6c5","error":"#ba1a1a","surface-container-high":"#eae7e7","tertiary-container":"#241a00","primary":"#000000","surface-tint":"#5f5e5e","secondary":"#775a19","on-background":"#1c1b1b","primary-container":"#1c1b1b","on-secondary-fixed":"#261900","surface-container-lowest":"#ffffff","outline-variant":"#c4c7c7","on-surface-variant":"#444748","inverse-primary":"#c8c6c5","surface-variant":"#e5e2e1","inverse-surface":"#313030","on-primary-container":"#858383","tertiary":"#000000","surface-container-highest":"#e5e2e1","on-primary":"#ffffff","on-secondary-fixed-variant":"#5d4201","on-secondary":"#ffffff","background":"#fcf9f8","surface-bright":"#fcf9f8","on-primary-fixed-variant":"#474646","secondary-container":"#fed488","on-error-container":"#93000a","primary-fixed":"#e5e2e1","on-tertiary-container":"#978246","inverse-on-surface":"#f3f0ef"},fontFamily:{"headline":["Newsreader","serif"],"body":["Manrope","sans-serif"],"label":["Manrope","sans-serif"]},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"}}},
+  }
+</script>
+<style>.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;}</style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-[#f6f3f2] sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
+  <div class="text-2xl font-serif font-bold tracking-tighter text-[#1c1b1b]">CENTURY CAPITAL</div>
+  <div class="hidden md:flex items-center space-x-12">
+    <a class="font-sans uppercase tracking-widest text-xs text-[#1c1b1b] hover:text-[#775a19] transition-colors" href="index.html">Projects</a>
+    <a class="font-sans uppercase tracking-widest text-xs text-[#1c1b1b] hover:text-[#775a19] transition-colors" href="services.html">Services</a>
+    <a class="font-sans uppercase tracking-widest text-xs text-[#1c1b1b] hover:text-[#775a19] transition-colors" href="about.html">About</a>
+    <a class="font-sans uppercase tracking-widest text-xs font-bold text-[#775a19] border-b-2 border-[#775a19] pb-1" href="contact.html">Contact</a>
+  </div>
+  <a href="dashboard.html" class="bg-primary text-on-primary px-8 py-2.5 font-sans uppercase tracking-[0.15em] text-[10px] font-bold hover:bg-secondary transition-all">Login</a>
+</div>
+</nav>
+<main class="min-h-screen">
+<!-- Hero -->
+<section class="relative pt-32 pb-20 px-12 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+  <div class="md:col-span-8">
+    <h1 class="font-headline text-6xl md:text-8xl italic font-bold tracking-tighter leading-none mb-8">Let's Build the Future</h1>
+  </div>
+  <div class="md:col-span-4 pb-4">
+    <p class="font-body text-on-surface-variant text-lg max-w-xs">Connecting visionary capital with architectural permanence. Reach out to our global offices to begin the dialogue.</p>
+  </div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="px-12 pb-32 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-20">
+  <!-- Form -->
+  <div class="md:col-span-7 bg-surface-container-low p-12 md:p-20">
+    <form class="space-y-12" onsubmit="handleSubmit(event)">
+      <div class="group relative">
+        <label class="block font-label text-[10px] uppercase tracking-[0.2em] text-secondary mb-2">Name</label>
+        <input id="contact-name" class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-colors py-4 text-xl font-headline placeholder:text-outline-variant/30" placeholder="Your full name" type="text" required/>
+      </div>
+      <div class="group relative">
+        <label class="block font-label text-[10px] uppercase tracking-[0.2em] text-secondary mb-2">Email Address</label>
+        <input id="contact-email" class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-colors py-4 text-xl font-headline placeholder:text-outline-variant/30" placeholder="email@example.com" type="email" required/>
+      </div>
+      <div class="group relative">
+        <label class="block font-label text-[10px] uppercase tracking-[0.2em] text-secondary mb-2">Project Type</label>
+        <select class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-colors py-4 text-xl font-headline appearance-none">
+          <option>Commercial Development</option>
+          <option>Private Equity Partnership</option>
+          <option>Infrastructure Innovation</option>
+          <option>Asset Management</option>
+        </select>
+      </div>
+      <div class="group relative">
+        <label class="block font-label text-[10px] uppercase tracking-[0.2em] text-secondary mb-2">Message</label>
+        <textarea id="contact-message" class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-colors py-4 text-xl font-headline placeholder:text-outline-variant/30 resize-none" placeholder="Describe your vision" rows="4"></textarea>
+      </div>
+      <button class="inline-flex items-center gap-4 bg-primary text-on-primary px-12 py-5 font-label text-xs uppercase tracking-[0.2em] hover:bg-secondary transition-colors active:scale-95 duration-300" type="submit">
+        Send Inquiry <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </button>
+      <p id="form-success" class="hidden text-secondary font-label text-sm uppercase tracking-widest mt-4">✓ Message sent! We'll be in touch.</p>
+    </form>
+  </div>
+  <!-- Info -->
+  <div class="md:col-span-5 space-y-20">
+    <div>
+      <h2 class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant mb-10 border-l-4 border-secondary pl-6">Global Offices</h2>
+      <div class="space-y-16">
+        <div>
+          <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-2">Scandinavia</p>
+          <h3 class="font-headline text-3xl italic font-bold mb-4">Oslo</h3>
+          <p class="font-body text-on-surface-variant leading-relaxed">Dronning Eufemias gate 16<br/>0191 Oslo, Norway<br/>+47 22 83 00 00</p>
+        </div>
+        <div>
+          <p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-2">North America</p>
+          <h3 class="font-headline text-3xl italic font-bold mb-4">New York</h3>
+          <p class="font-body text-on-surface-variant leading-relaxed">730 Fifth Avenue, 18th Floor<br/>New York, NY 10019<br/>+1 (212) 555-0198</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary text-on-primary p-10">
+      <p class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary-fixed-dim mb-6">General Correspondence</p>
+      <a class="font-headline text-2xl italic block mb-2 hover:text-secondary-fixed transition-colors" href="mailto:contact@centurycapital.com">contact@centurycapital.com</a>
+      <p class="font-body text-on-primary-container text-sm">For press inquiries and partnership proposals.</p>
+    </div>
+  </div>
+</div>
+</section>
+<!-- Quote Break -->
+<section class="px-12 pb-40 max-w-4xl mx-auto text-center">
+<div class="w-1 h-20 bg-secondary mx-auto mb-12"></div>
+<p class="font-headline text-4xl md:text-5xl italic leading-tight text-on-surface">"Architecture is the learned game, correct and magnificent, of forms assembled in the light."</p>
+<p class="font-label text-[10px] uppercase tracking-[0.4em] text-secondary mt-8">The Century Ethos</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 border-t border-[#c4c7c7]/15 py-20 bg-[#f6f3f2]">
+<div class="text-xl font-serif font-black text-[#1c1b1b] mb-8 md:mb-0">CENTURY CAPITAL</div>
+<div class="flex flex-col md:flex-row items-center gap-12">
+  <div class="flex gap-8">
+    <a class="font-sans text-[11px] uppercase tracking-widest text-[#1c1b1b]/50 hover:text-[#775a19] transition-all" href="#">Privacy Policy</a>
+    <a class="font-sans text-[11px] uppercase tracking-widest text-[#1c1b1b]/50 hover:text-[#775a19] transition-all" href="#">Terms of Service</a>
+  </div>
+  <p class="font-sans text-[11px] uppercase tracking-widest text-[#1c1b1b]/50">© 2024 Century Capital. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('form-success').classList.remove('hidden');
+  e.target.reset();
+}
+</script>
+</body>
+</html>

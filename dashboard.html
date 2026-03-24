@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard | Century Capital Admin</title>
+<meta name="description" content="Century Capital client dashboard — project management and team collaboration portal."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#ffdad6","surface-container-low":"#f6f3f2","on-primary-fixed":"#1c1b1b","outline":"#747878","on-secondary-container":"#785a1a","secondary-fixed-dim":"#e9c176","on-error":"#ffffff","surface-container":"#f0eded","on-surface":"#1c1b1b","surface":"#fcf9f8","primary-fixed-dim":"#c8c6c5","error":"#ba1a1a","surface-container-high":"#eae7e7","primary":"#000000","secondary":"#775a19","on-background":"#1c1b1b","primary-container":"#1c1b1b","surface-container-lowest":"#ffffff","outline-variant":"#c4c7c7","on-surface-variant":"#444748","surface-variant":"#e5e2e1","inverse-surface":"#313030","on-primary-container":"#858383","surface-container-highest":"#e5e2e1","on-primary":"#ffffff","on-secondary":"#ffffff","background":"#fcf9f8","on-primary-fixed-variant":"#474646","secondary-container":"#fed488","on-error-container":"#93000a","primary-fixed":"#e5e2e1","inverse-on-surface":"#f3f0ef"},fontFamily:{"headline":["Newsreader","serif"],"body":["Manrope","sans-serif"],"label":["Manrope","sans-serif"]},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"}}}}
+</script>
+<style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+  body{font-family:'Manrope',sans-serif;}
+  .no-scrollbar::-webkit-scrollbar{display:none;}
+</style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full flex flex-col pt-12 pb-8 z-40 bg-[#1c1b1b] w-64 shadow-[0px_24px_48px_rgba(28,27,27,0.06)]">
+<div class="px-8 mb-12">
+  <h1 class="text-lg font-serif italic text-[#fcf9f8]">Century Admin</h1>
+  <p class="font-sans uppercase text-[10px] tracking-[0.05em] text-[#eae7e7]/60 mt-1">Managing Partner</p>
+</div>
+<div class="flex-1 space-y-2">
+  <a class="flex items-center gap-4 text-[#eae7e7]/60 pl-4 py-3 hover:bg-[#775a19]/10 hover:text-[#fed488] transition-all" href="#"><span class="material-symbols-outlined">dashboard</span><span class="font-sans uppercase text-[10px] tracking-[0.05em]">Dashboard</span></a>
+  <a class="flex items-center gap-4 text-[#fed488] border-l-4 border-[#775a19] pl-4 py-3 translate-x-1 transition-transform" href="#"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">work</span><span class="font-sans uppercase text-[10px] tracking-[0.05em]">Projects</span></a>
+  <a class="flex items-center gap-4 text-[#eae7e7]/60 pl-4 py-3 hover:bg-[#775a19]/10 hover:text-[#fed488] transition-all" href="#"><span class="material-symbols-outlined">mail</span><span class="font-sans uppercase text-[10px] tracking-[0.05em]">Messages</span></a>
+  <a class="flex items-center gap-4 text-[#eae7e7]/60 pl-4 py-3 hover:bg-[#775a19]/10 hover:text-[#fed488] transition-all" href="support.html"><span class="material-symbols-outlined">help</span><span class="font-sans uppercase text-[10px] tracking-[0.05em]">Support</span></a>
+  <a class="flex items-center gap-4 text-[#eae7e7]/60 pl-4 py-3 hover:bg-[#775a19]/10 hover:text-[#fed488] transition-all" href="#"><span class="material-symbols-outlined">settings</span><span class="font-sans uppercase text-[10px] tracking-[0.05em]">Settings</span></a>
+</div>
+<a href="index.html" class="px-8 flex items-center gap-3 mt-6">
+  <div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-[10px] font-bold text-secondary">AV</div>
+  <span class="font-sans uppercase text-[10px] tracking-[0.05em] text-[#fcf9f8]">Alexander Vane</span>
+</a>
+</nav>
+<!-- Main Content -->
+<main class="ml-64 min-h-screen grid grid-cols-12">
+<div class="col-span-12 lg:col-span-8 p-12 overflow-y-auto no-scrollbar">
+  <!-- Header -->
+  <header class="mb-16">
+    <div class="flex items-center gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Active Initiative</span><div class="h-px w-8 bg-outline-variant/30"></div></div>
+    <h2 class="text-5xl font-headline italic text-primary leading-tight mb-4">Metropolitan Equity Rebrand</h2>
+    <div class="flex items-center gap-8">
+      <div class="flex flex-col"><span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Current Phase</span><span class="text-secondary font-bold font-body text-sm">Final UI Polish</span></div>
+      <div class="w-px h-8 bg-outline-variant/30"></div>
+      <div class="flex flex-col"><span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Deadline</span><span class="text-on-surface font-medium font-body text-sm">Oct 24, 2024</span></div>
+    </div>
+  </header>
+  <!-- Timeline Bento -->
+  <section class="mb-16">
+    <div class="flex justify-between items-end mb-8"><h3 class="text-xl font-headline italic">Project Roadmap</h3><button class="text-[10px] font-label uppercase tracking-widest text-secondary-fixed-dim border-b-2 border-secondary-fixed-dim pb-1">View Full Gantt</button></div>
+    <div class="grid grid-cols-4 gap-4">
+      <div class="col-span-4 bg-primary-container p-8 relative overflow-hidden">
+        <div class="relative z-10 flex flex-col justify-between h-full"><span class="font-label text-[10px] uppercase tracking-widest text-on-primary-container mb-12">Overall Velocity</span><div class="flex items-end justify-between"><span class="text-6xl font-headline italic text-surface">82%</span><div class="w-64 h-1 bg-white/10 relative"><div class="absolute top-0 left-0 h-full bg-secondary-fixed-dim" style="width:82%"></div></div></div></div>
+        <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+      </div>
+      <div class="col-span-1 bg-surface-container-low p-6 flex flex-col justify-between h-40"><span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">check_circle</span><div><p class="font-label text-[9px] uppercase tracking-[0.1em] text-on-surface-variant mb-1">Concept</p><p class="text-sm font-medium">Approved</p></div></div>
+      <div class="col-span-1 bg-surface-container-low p-6 flex flex-col justify-between h-40"><span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">check_circle</span><div><p class="font-label text-[9px] uppercase tracking-[0.1em] text-on-surface-variant mb-1">Wireframes</p><p class="text-sm font-medium">Finalized</p></div></div>
+      <div class="col-span-1 bg-surface-container-high p-6 flex flex-col justify-between h-40 relative"><span class="material-symbols-outlined text-secondary animate-pulse">potted_plant</span><div><p class="font-label text-[9px] uppercase tracking-[0.1em] text-secondary font-bold mb-1">UI Design</p><p class="text-sm font-medium">In Progress</p></div><div class="absolute top-0 right-0 w-1 h-full bg-secondary"></div></div>
+      <div class="col-span-1 border border-outline-variant/15 p-6 flex flex-col justify-between h-40"><span class="material-symbols-outlined text-outline-variant">pending</span><div><p class="font-label text-[9px] uppercase tracking-[0.1em] text-on-surface-variant mb-1">Delivery</p><p class="text-sm font-medium opacity-40">Pending</p></div></div>
+    </div>
+  </section>
+  <!-- Asset Repository -->
+  <section>
+    <h3 class="text-xl font-headline italic mb-8">Asset Repository</h3>
+    <div class="space-y-4">
+      <div class="group flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface hover:shadow-[0px_24px_48px_rgba(28,27,27,0.06)] transition-all cursor-pointer">
+        <div class="flex items-center gap-6"><div class="w-12 h-12 bg-secondary/5 flex items-center justify-center"><span class="material-symbols-outlined text-secondary">picture_as_pdf</span></div><div><h4 class="text-sm font-semibold tracking-tight">Brand_Guidelines_V2.pdf</h4><p class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">Uploaded 2 days ago • 14.2 MB</p></div></div>
+        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-on-surface-variant">download</span>
+      </div>
+      <div class="group flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface hover:shadow-[0px_24px_48px_rgba(28,27,27,0.06)] transition-all cursor-pointer">
+        <div class="flex items-center gap-6"><div class="w-12 h-12 bg-secondary/5 flex items-center justify-center"><span class="material-symbols-outlined text-secondary">link</span></div><div><h4 class="text-sm font-semibold tracking-tight">Figma Prototype: High Fidelity</h4><p class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">External Link • figma.com/file/...</p></div></div>
+        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-on-surface-variant">open_in_new</span>
+      </div>
+      <div class="group flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface hover:shadow-[0px_24px_48px_rgba(28,27,27,0.06)] transition-all cursor-pointer">
+        <div class="flex items-center gap-6"><div class="w-12 h-12 bg-secondary/5 flex items-center justify-center"><span class="material-symbols-outlined text-secondary">inventory_2</span></div><div><h4 class="text-sm font-semibold tracking-tight">Asset_Pack_Icons_Raw.zip</h4><p class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">Uploaded 5 days ago • 89.0 MB</p></div></div>
+        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-on-surface-variant">download</span>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- Right Panel: Chat -->
+<aside class="col-span-12 lg:col-span-4 bg-surface-container-low flex flex-col h-screen border-l border-outline-variant/10">
+  <div class="p-8 pb-4"><div class="flex items-center justify-between mb-8"><h3 class="font-label text-[10px] uppercase tracking-[0.2em] font-bold">Internal Briefing</h3></div></div>
+  <div class="flex-1 overflow-y-auto px-8 space-y-8 no-scrollbar">
+    <div class="flex gap-4">
+      <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-[10px] font-bold text-white shrink-0">JR</div>
+      <div class="space-y-1"><div class="flex items-baseline gap-2"><span class="text-[11px] font-bold">Julianne Reed</span><span class="text-[9px] text-on-surface-variant/60 uppercase">10:42 AM</span></div><p class="text-sm text-on-surface-variant leading-relaxed">I've updated the typography scale on the hero section. Let me know if the 'Newsreader' weight feels right.</p></div>
+    </div>
+    <div class="flex gap-4 flex-row-reverse text-right">
+      <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="text-[10px] text-white font-bold">AV</span></div>
+      <div class="space-y-1"><div class="flex items-baseline gap-2 flex-row-reverse"><span class="text-[11px] font-bold">You</span><span class="text-[9px] text-on-surface-variant/60 uppercase">10:45 AM</span></div><div class="inline-block bg-secondary-container/30 p-3 rounded-lg text-sm text-on-surface-variant leading-relaxed">Agreed. Let's lock it in.</div></div>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-8 h-8 rounded-full bg-outline/20 flex items-center justify-center text-[10px] font-bold shrink-0">MT</div>
+      <div class="space-y-1"><div class="flex items-baseline gap-2"><span class="text-[11px] font-bold">Marcus Thorne</span><span class="text-[9px] text-on-surface-variant/60 uppercase">11:02 AM</span></div><p class="text-sm text-on-surface-variant leading-relaxed">Reviewing the CSS implementation now. The brass accents are rendering perfectly in dark mode.</p></div>
+    </div>
+  </div>
+  <div class="p-8">
+    <div class="relative"><textarea class="w-full bg-transparent border-0 border-b border-outline p-0 py-4 focus:ring-0 focus:border-secondary placeholder:text-on-surface-variant/40 font-label text-[10px] uppercase tracking-widest resize-none" placeholder="MESSAGE TEAM..." rows="1"></textarea><button class="absolute right-0 bottom-4 text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined">send</span></button></div>
+  </div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="ml-64 flex flex-col md:flex-row justify-between items-center px-12 border-t border-[#c4c7c7]/15 py-8 bg-[#f6f3f2]">
+<div><h2 class="text-xl font-serif font-black text-[#1c1b1b]">CENTURY CAPITAL</h2><p class="font-sans text-[11px] uppercase tracking-widest text-[#775a19] mt-2">© 2024 Century Capital. All Rights Reserved.</p></div>
+<div class="flex gap-8 mt-4 md:mt-0">
+  <a class="font-sans text-[11px] uppercase tracking-widest text-[#1c1b1b]/50 hover:text-[#775a19]" href="#">Privacy Policy</a>
+  <a class="font-sans text-[11px] uppercase tracking-widest text-[#1c1b1b]/50 hover:text-[#775a19]" href="#">Terms of Service</a>
+</div>
+</footer>
+</body>
+</html>
