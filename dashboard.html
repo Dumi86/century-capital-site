@@ -3,114 +3,542 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Dashboard | Century Capital Admin</title>
-<meta name="description" content="Century Capital client dashboard — project management and team collaboration portal."/>
+<title>Dashboard | Century Capital</title>
+<meta name="description" content="Century Capital admin dashboard."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script id="tailwind-config">
-  tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#ffdad6","surface-container-low":"#f6f3f2","on-primary-fixed":"#1c1b1b","outline":"#747878","on-secondary-container":"#785a1a","secondary-fixed-dim":"#e9c176","on-error":"#ffffff","surface-container":"#f0eded","on-surface":"#1c1b1b","surface":"#fcf9f8","primary-fixed-dim":"#c8c6c5","error":"#ba1a1a","surface-container-high":"#eae7e7","primary":"#000000","secondary":"#775a19","on-background":"#1c1b1b","primary-container":"#1c1b1b","surface-container-lowest":"#ffffff","outline-variant":"#c4c7c7","on-surface-variant":"#444748","surface-variant":"#e5e2e1","inverse-surface":"#313030","on-primary-container":"#858383","surface-container-highest":"#e5e2e1","on-primary":"#ffffff","on-secondary":"#ffffff","background":"#fcf9f8","on-primary-fixed-variant":"#474646","secondary-container":"#fed488","on-error-container":"#93000a","primary-fixed":"#e5e2e1","inverse-on-surface":"#f3f0ef"},fontFamily:{"headline":["Newsreader","serif"],"body":["Manrope","sans-serif"],"label":["Manrope","sans-serif"]},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"}}}}
+  tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#fcf9f8","on-surface":"#1c1b1b","primary":"#000000","on-surface-variant":"#444748","surface-container-low":"#f6f3f2","surface-container-high":"#eae7e7","outline-variant":"#c4c7c7","primary-container":"#1c1b1b","surface-container":"#f0eded","secondary-fixed-dim":"#e9c176","on-primary-container":"#858383","on-primary":"#ffffff","outline":"#747878","secondary":"#775a19","secondary-container":"#fed488","on-secondary-container":"#785a1a","surface-container-highest":"#e5e2e1","background":"#fcf9f8","on-background":"#1c1b1b","error":"#ba1a1a","error-container":"#ffdad6","on-error":"#ffffff"},fontFamily:{"headline":["Newsreader","serif"],"body":["Manrope","sans-serif"],"label":["Manrope","sans-serif"]},borderRadius:{"DEFAULT":"0.125rem"}}}}
 </script>
 <style>
-  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
-  body{font-family:'Manrope',sans-serif;}
-  .no-scrollbar::-webkit-scrollbar{display:none;}
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;}
+  .nav-item.active{background:rgba(119,90,25,0.12); color:#775a19;}
+  .tab-content{display:none;} .tab-content.active{display:block;}
+  .status-new{background:#fed488;color:#785a1a;}
+  .status-read{background:#e5e2e1;color:#444748;}
+  .status-replied{background:#1c1b1b;color:white;}
+  .status-archived{background:#f0eded;color:#747878;}
+  .phase-Discovery{background:#e5e2e1;color:#444748;}
+  .phase-Design{background:#fed488;color:#785a1a;}
+  .phase-Development{background:#1c1b1b;color:white;}
+  .phase-Review{background:#ffdad6;color:#93000a;}
+  .phase-Launched{background:rgba(119,90,25,0.15);color:#775a19;}
+  .project-status-active{background:rgba(119,90,25,0.12);color:#775a19;}
+  .project-status-completed{background:#e5e2e1;color:#444748;}
+  .project-status-paused{background:#ffdad6;color:#93000a;}
+  [data-modal]{display:none;} [data-modal].open{display:flex;}
 </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-secondary-container">
-<!-- SideNavBar -->
-<nav class="fixed left-0 top-0 h-full flex flex-col pt-12 pb-8 z-40 bg-[#1c1b1b] w-64 shadow-[0px_24px_48px_rgba(28,27,27,0.06)]">
-<div class="px-8 mb-12">
-  <h1 class="text-lg font-serif italic text-[#fcf9f8]">Century Admin</h1>
-  <p class="font-sans uppercase text-[10px] tracking-[0.05em] text-[#eae7e7]/60 mt-1">Managing Partner</p>
-</div>
-<div class="flex-1 space-y-2">
-  <a class="flex items-center gap-4 text-[#eae7e7]/60 pl-4 py-3 hover:bg-[#775a19]/10 hover:text-[#fed488] transition-all" href="#"><span class="material-symbols-outlined">dashboard</span><span class="font-sans uppercase text-[10px] tracking-[0.05em]">Dashboard</span></a>
-  <a class="flex items-center gap-4 text-[#fed488] border-l-4 border-[#775a19] pl-4 py-3 translate-x-1 transition-transform" href="#"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">work</span><span class="font-sans uppercase text-[10px] tracking-[0.05em]">Projects</span></a>
-  <a class="flex items-center gap-4 text-[#eae7e7]/60 pl-4 py-3 hover:bg-[#775a19]/10 hover:text-[#fed488] transition-all" href="#"><span class="material-symbols-outlined">mail</span><span class="font-sans uppercase text-[10px] tracking-[0.05em]">Messages</span></a>
-  <a class="flex items-center gap-4 text-[#eae7e7]/60 pl-4 py-3 hover:bg-[#775a19]/10 hover:text-[#fed488] transition-all" href="support.html"><span class="material-symbols-outlined">help</span><span class="font-sans uppercase text-[10px] tracking-[0.05em]">Support</span></a>
-  <a class="flex items-center gap-4 text-[#eae7e7]/60 pl-4 py-3 hover:bg-[#775a19]/10 hover:text-[#fed488] transition-all" href="#"><span class="material-symbols-outlined">settings</span><span class="font-sans uppercase text-[10px] tracking-[0.05em]">Settings</span></a>
-</div>
-<a href="index.html" class="px-8 flex items-center gap-3 mt-6">
-  <div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-[10px] font-bold text-secondary">AV</div>
-  <span class="font-sans uppercase text-[10px] tracking-[0.05em] text-[#fcf9f8]">Alexander Vane</span>
-</a>
-</nav>
-<!-- Main Content -->
-<main class="ml-64 min-h-screen grid grid-cols-12">
-<div class="col-span-12 lg:col-span-8 p-12 overflow-y-auto no-scrollbar">
-  <!-- Header -->
-  <header class="mb-16">
-    <div class="flex items-center gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Active Initiative</span><div class="h-px w-8 bg-outline-variant/30"></div></div>
-    <h2 class="text-5xl font-headline italic text-primary leading-tight mb-4">Metropolitan Equity Rebrand</h2>
-    <div class="flex items-center gap-8">
-      <div class="flex flex-col"><span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Current Phase</span><span class="text-secondary font-bold font-body text-sm">Final UI Polish</span></div>
-      <div class="w-px h-8 bg-outline-variant/30"></div>
-      <div class="flex flex-col"><span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Deadline</span><span class="text-on-surface font-medium font-body text-sm">Oct 24, 2024</span></div>
-    </div>
-  </header>
-  <!-- Timeline Bento -->
-  <section class="mb-16">
-    <div class="flex justify-between items-end mb-8"><h3 class="text-xl font-headline italic">Project Roadmap</h3><button class="text-[10px] font-label uppercase tracking-widest text-secondary-fixed-dim border-b-2 border-secondary-fixed-dim pb-1">View Full Gantt</button></div>
-    <div class="grid grid-cols-4 gap-4">
-      <div class="col-span-4 bg-primary-container p-8 relative overflow-hidden">
-        <div class="relative z-10 flex flex-col justify-between h-full"><span class="font-label text-[10px] uppercase tracking-widest text-on-primary-container mb-12">Overall Velocity</span><div class="flex items-end justify-between"><span class="text-6xl font-headline italic text-surface">82%</span><div class="w-64 h-1 bg-white/10 relative"><div class="absolute top-0 left-0 h-full bg-secondary-fixed-dim" style="width:82%"></div></div></div></div>
-        <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
-      </div>
-      <div class="col-span-1 bg-surface-container-low p-6 flex flex-col justify-between h-40"><span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">check_circle</span><div><p class="font-label text-[9px] uppercase tracking-[0.1em] text-on-surface-variant mb-1">Concept</p><p class="text-sm font-medium">Approved</p></div></div>
-      <div class="col-span-1 bg-surface-container-low p-6 flex flex-col justify-between h-40"><span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">check_circle</span><div><p class="font-label text-[9px] uppercase tracking-[0.1em] text-on-surface-variant mb-1">Wireframes</p><p class="text-sm font-medium">Finalized</p></div></div>
-      <div class="col-span-1 bg-surface-container-high p-6 flex flex-col justify-between h-40 relative"><span class="material-symbols-outlined text-secondary animate-pulse">potted_plant</span><div><p class="font-label text-[9px] uppercase tracking-[0.1em] text-secondary font-bold mb-1">UI Design</p><p class="text-sm font-medium">In Progress</p></div><div class="absolute top-0 right-0 w-1 h-full bg-secondary"></div></div>
-      <div class="col-span-1 border border-outline-variant/15 p-6 flex flex-col justify-between h-40"><span class="material-symbols-outlined text-outline-variant">pending</span><div><p class="font-label text-[9px] uppercase tracking-[0.1em] text-on-surface-variant mb-1">Delivery</p><p class="text-sm font-medium opacity-40">Pending</p></div></div>
-    </div>
-  </section>
-  <!-- Asset Repository -->
-  <section>
-    <h3 class="text-xl font-headline italic mb-8">Asset Repository</h3>
-    <div class="space-y-4">
-      <div class="group flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface hover:shadow-[0px_24px_48px_rgba(28,27,27,0.06)] transition-all cursor-pointer">
-        <div class="flex items-center gap-6"><div class="w-12 h-12 bg-secondary/5 flex items-center justify-center"><span class="material-symbols-outlined text-secondary">picture_as_pdf</span></div><div><h4 class="text-sm font-semibold tracking-tight">Brand_Guidelines_V2.pdf</h4><p class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">Uploaded 2 days ago • 14.2 MB</p></div></div>
-        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-on-surface-variant">download</span>
-      </div>
-      <div class="group flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface hover:shadow-[0px_24px_48px_rgba(28,27,27,0.06)] transition-all cursor-pointer">
-        <div class="flex items-center gap-6"><div class="w-12 h-12 bg-secondary/5 flex items-center justify-center"><span class="material-symbols-outlined text-secondary">link</span></div><div><h4 class="text-sm font-semibold tracking-tight">Figma Prototype: High Fidelity</h4><p class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">External Link • figma.com/file/...</p></div></div>
-        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-on-surface-variant">open_in_new</span>
-      </div>
-      <div class="group flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface hover:shadow-[0px_24px_48px_rgba(28,27,27,0.06)] transition-all cursor-pointer">
-        <div class="flex items-center gap-6"><div class="w-12 h-12 bg-secondary/5 flex items-center justify-center"><span class="material-symbols-outlined text-secondary">inventory_2</span></div><div><h4 class="text-sm font-semibold tracking-tight">Asset_Pack_Icons_Raw.zip</h4><p class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">Uploaded 5 days ago • 89.0 MB</p></div></div>
-        <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-on-surface-variant">download</span>
-      </div>
-    </div>
-  </section>
-</div>
-<!-- Right Panel: Chat -->
-<aside class="col-span-12 lg:col-span-4 bg-surface-container-low flex flex-col h-screen border-l border-outline-variant/10">
-  <div class="p-8 pb-4"><div class="flex items-center justify-between mb-8"><h3 class="font-label text-[10px] uppercase tracking-[0.2em] font-bold">Internal Briefing</h3></div></div>
-  <div class="flex-1 overflow-y-auto px-8 space-y-8 no-scrollbar">
-    <div class="flex gap-4">
-      <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-[10px] font-bold text-white shrink-0">JR</div>
-      <div class="space-y-1"><div class="flex items-baseline gap-2"><span class="text-[11px] font-bold">Julianne Reed</span><span class="text-[9px] text-on-surface-variant/60 uppercase">10:42 AM</span></div><p class="text-sm text-on-surface-variant leading-relaxed">I've updated the typography scale on the hero section. Let me know if the 'Newsreader' weight feels right.</p></div>
-    </div>
-    <div class="flex gap-4 flex-row-reverse text-right">
-      <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="text-[10px] text-white font-bold">AV</span></div>
-      <div class="space-y-1"><div class="flex items-baseline gap-2 flex-row-reverse"><span class="text-[11px] font-bold">You</span><span class="text-[9px] text-on-surface-variant/60 uppercase">10:45 AM</span></div><div class="inline-block bg-secondary-container/30 p-3 rounded-lg text-sm text-on-surface-variant leading-relaxed">Agreed. Let's lock it in.</div></div>
-    </div>
-    <div class="flex gap-4">
-      <div class="w-8 h-8 rounded-full bg-outline/20 flex items-center justify-center text-[10px] font-bold shrink-0">MT</div>
-      <div class="space-y-1"><div class="flex items-baseline gap-2"><span class="text-[11px] font-bold">Marcus Thorne</span><span class="text-[9px] text-on-surface-variant/60 uppercase">11:02 AM</span></div><p class="text-sm text-on-surface-variant leading-relaxed">Reviewing the CSS implementation now. The brass accents are rendering perfectly in dark mode.</p></div>
+<body class="bg-surface-container-low text-on-surface font-body">
+
+<!-- Auth guard loader -->
+<div id="auth-loading" class="fixed inset-0 bg-primary flex items-center justify-center z-[9999]">
+  <div class="text-center text-on-primary">
+    <div class="text-3xl font-serif font-bold tracking-tighter mb-4">CENTURY CAPITAL</div>
+    <div class="flex items-center gap-3 justify-center opacity-60">
+      <div class="w-2 h-2 bg-secondary rounded-full animate-bounce" style="animation-delay:0ms"></div>
+      <div class="w-2 h-2 bg-secondary rounded-full animate-bounce" style="animation-delay:150ms"></div>
+      <div class="w-2 h-2 bg-secondary rounded-full animate-bounce" style="animation-delay:300ms"></div>
     </div>
   </div>
-  <div class="p-8">
-    <div class="relative"><textarea class="w-full bg-transparent border-0 border-b border-outline p-0 py-4 focus:ring-0 focus:border-secondary placeholder:text-on-surface-variant/40 font-label text-[10px] uppercase tracking-widest resize-none" placeholder="MESSAGE TEAM..." rows="1"></textarea><button class="absolute right-0 bottom-4 text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined">send</span></button></div>
-  </div>
-</aside>
-</main>
-<!-- Footer -->
-<footer class="ml-64 flex flex-col md:flex-row justify-between items-center px-12 border-t border-[#c4c7c7]/15 py-8 bg-[#f6f3f2]">
-<div><h2 class="text-xl font-serif font-black text-[#1c1b1b]">CENTURY CAPITAL</h2><p class="font-sans text-[11px] uppercase tracking-widest text-[#775a19] mt-2">© 2024 Century Capital. All Rights Reserved.</p></div>
-<div class="flex gap-8 mt-4 md:mt-0">
-  <a class="font-sans text-[11px] uppercase tracking-widest text-[#1c1b1b]/50 hover:text-[#775a19]" href="#">Privacy Policy</a>
-  <a class="font-sans text-[11px] uppercase tracking-widest text-[#1c1b1b]/50 hover:text-[#775a19]" href="#">Terms of Service</a>
 </div>
-</footer>
+
+<div id="app" class="hidden min-h-screen flex">
+  <!-- Sidebar -->
+  <aside class="w-16 lg:w-64 bg-primary-container flex-shrink-0 flex flex-col py-8 fixed left-0 top-0 bottom-0 z-40">
+    <div class="px-4 lg:px-6 mb-10">
+      <div class="text-on-primary font-serif font-bold text-base lg:text-xl tracking-tighter hidden lg:block">CENTURY CAPITAL</div>
+      <div class="text-on-primary font-serif font-bold text-xl tracking-tighter lg:hidden mx-auto w-fit">CC</div>
+      <p class="font-label text-[9px] uppercase tracking-widest text-on-primary-container hidden lg:block mt-1">Admin Dashboard</p>
+    </div>
+
+    <nav class="flex-1 px-2 lg:px-4 space-y-1">
+      <button onclick="switchTab('overview')" data-tab="overview" class="nav-item active w-full flex items-center gap-3 px-3 py-3 text-on-primary rounded hover:bg-white/10 transition-colors">
+        <span class="material-symbols-outlined text-xl flex-shrink-0">dashboard</span>
+        <span class="hidden lg:block font-label text-xs uppercase tracking-widest">Overview</span>
+      </button>
+      <button onclick="switchTab('inbox')" data-tab="inbox" class="nav-item w-full flex items-center gap-3 px-3 py-3 text-on-primary-container rounded hover:bg-white/10 transition-colors">
+        <span class="material-symbols-outlined text-xl flex-shrink-0">inbox</span>
+        <span class="hidden lg:block font-label text-xs uppercase tracking-widest">Inbox</span>
+        <span id="inbox-badge" class="hidden lg:flex ml-auto bg-secondary text-on-secondary text-[9px] font-bold px-2 py-0.5 rounded-full"></span>
+      </button>
+      <button onclick="switchTab('projects')" data-tab="projects" class="nav-item w-full flex items-center gap-3 px-3 py-3 text-on-primary-container rounded hover:bg-white/10 transition-colors">
+        <span class="material-symbols-outlined text-xl flex-shrink-0">folder_open</span>
+        <span class="hidden lg:block font-label text-xs uppercase tracking-widest">Projects</span>
+      </button>
+      <button onclick="switchTab('messages')" data-tab="messages" class="nav-item w-full flex items-center gap-3 px-3 py-3 text-on-primary-container rounded hover:bg-white/10 transition-colors">
+        <span class="material-symbols-outlined text-xl flex-shrink-0">chat</span>
+        <span class="hidden lg:block font-label text-xs uppercase tracking-widest">Messages</span>
+      </button>
+    </nav>
+
+    <div class="px-2 lg:px-4 pt-4 border-t border-on-primary-container/10 space-y-1">
+      <a href="index.html" class="w-full flex items-center gap-3 px-3 py-3 text-on-primary-container hover:bg-white/10 transition-colors rounded">
+        <span class="material-symbols-outlined text-xl flex-shrink-0">open_in_new</span>
+        <span class="hidden lg:block font-label text-xs uppercase tracking-widest">View Site</span>
+      </a>
+      <button onclick="handleLogout()" class="w-full flex items-center gap-3 px-3 py-3 text-on-primary-container hover:bg-white/10 transition-colors rounded">
+        <span class="material-symbols-outlined text-xl flex-shrink-0">logout</span>
+        <span class="hidden lg:block font-label text-xs uppercase tracking-widest">Sign Out</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 ml-16 lg:ml-64 min-h-screen flex flex-col">
+    <!-- Top Bar -->
+    <div class="bg-surface border-b border-outline-variant/20 px-6 py-4 flex items-center justify-between sticky top-0 z-30">
+      <div>
+        <h1 id="page-title" class="font-headline italic text-2xl text-primary">Overview</h1>
+        <p id="page-subtitle" class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant"></p>
+      </div>
+      <div class="flex items-center gap-4">
+        <div id="user-chip" class="hidden md:flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded">
+          <span class="material-symbols-outlined text-sm text-secondary">account_circle</span>
+          <span id="user-email" class="font-label text-xs text-on-surface-variant"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-1 p-6 overflow-auto">
+
+      <!-- OVERVIEW TAB -->
+      <div id="tab-overview" class="tab-content active space-y-6">
+        <!-- Stats -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-surface p-6 border-l-4 border-secondary">
+            <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">New Enquiries</p>
+            <p id="stat-new-enquiries" class="font-headline italic text-4xl text-primary">–</p>
+          </div>
+          <div class="bg-surface p-6 border-l-4 border-primary">
+            <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Active Projects</p>
+            <p id="stat-active-projects" class="font-headline italic text-4xl text-primary">–</p>
+          </div>
+          <div class="bg-surface p-6 border-l-4 border-outline-variant">
+            <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Completed</p>
+            <p id="stat-completed" class="font-headline italic text-4xl text-primary">–</p>
+          </div>
+          <div class="bg-secondary text-on-secondary p-6">
+            <p class="font-label text-[10px] uppercase tracking-widest opacity-70 mb-1">Pipeline Value</p>
+            <p id="stat-pipeline" class="font-headline italic text-4xl">–</p>
+          </div>
+        </div>
+
+        <!-- Latest Enquiries preview -->
+        <div class="bg-surface">
+          <div class="p-6 border-b border-outline-variant/20 flex items-center justify-between">
+            <h2 class="font-headline italic text-xl">Recent Enquiries</h2>
+            <button onclick="switchTab('inbox')" class="font-label text-xs uppercase tracking-widest text-secondary hover:underline">View All</button>
+          </div>
+          <div id="overview-inbox" class="divide-y divide-outline-variant/10"></div>
+        </div>
+
+        <!-- Active Projects preview -->
+        <div class="bg-surface">
+          <div class="p-6 border-b border-outline-variant/20 flex items-center justify-between">
+            <h2 class="font-headline italic text-xl">Active Projects</h2>
+            <button onclick="switchTab('projects')" class="font-label text-xs uppercase tracking-widest text-secondary hover:underline">View All</button>
+          </div>
+          <div id="overview-projects" class="divide-y divide-outline-variant/10"></div>
+        </div>
+      </div>
+
+      <!-- INBOX TAB -->
+      <div id="tab-inbox" class="tab-content space-y-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex gap-2">
+            <button onclick="filterInbox('all')" id="inbox-filter-all" class="font-label text-xs uppercase tracking-widest px-4 py-2 bg-primary text-on-primary">All</button>
+            <button onclick="filterInbox('new')" id="inbox-filter-new" class="font-label text-xs uppercase tracking-widest px-4 py-2 bg-surface text-on-surface hover:bg-surface-container-high">New</button>
+            <button onclick="filterInbox('replied')" id="inbox-filter-replied" class="font-label text-xs uppercase tracking-widest px-4 py-2 bg-surface text-on-surface hover:bg-surface-container-high">Replied</button>
+          </div>
+        </div>
+        <div id="inbox-list" class="space-y-3"></div>
+      </div>
+
+      <!-- PROJECTS TAB -->
+      <div id="tab-projects" class="tab-content space-y-4">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex gap-2">
+            <button onclick="filterProjects('all')" id="proj-filter-all" class="font-label text-xs uppercase tracking-widest px-4 py-2 bg-primary text-on-primary">All</button>
+            <button onclick="filterProjects('active')" id="proj-filter-active" class="font-label text-xs uppercase tracking-widest px-4 py-2 bg-surface text-on-surface hover:bg-surface-container-high">Active</button>
+            <button onclick="filterProjects('completed')" id="proj-filter-completed" class="font-label text-xs uppercase tracking-widest px-4 py-2 bg-surface text-on-surface hover:bg-surface-container-high">Completed</button>
+          </div>
+          <button onclick="openProjectModal()" class="flex items-center gap-2 bg-secondary text-on-secondary px-6 py-2 font-label text-xs uppercase tracking-widest hover:bg-primary transition-colors">
+            <span class="material-symbols-outlined text-sm">add</span>
+            <span class="hidden md:block">New Project</span>
+          </button>
+        </div>
+        <div id="projects-list" class="space-y-3"></div>
+      </div>
+
+      <!-- MESSAGES TAB -->
+      <div id="tab-messages" class="tab-content space-y-4">
+        <div id="messages-list" class="space-y-4"></div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- Enquiry Detail Modal -->
+<div id="enquiry-modal" data-modal class="fixed inset-0 z-50 items-center justify-center p-4 bg-primary/60 backdrop-blur-sm">
+  <div class="bg-surface max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div class="flex items-center justify-between p-6 border-b border-outline-variant/20">
+      <h2 class="font-headline italic text-2xl" id="modal-name">–</h2>
+      <button onclick="closeModal('enquiry-modal')" class="material-symbols-outlined text-on-surface-variant hover:text-primary">close</button>
+    </div>
+    <div class="p-6 space-y-6">
+      <div class="grid grid-cols-2 gap-6">
+        <div><p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-1">Email</p><p id="modal-email" class="font-body text-sm">–</p></div>
+        <div><p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-1">Service</p><p id="modal-service" class="font-body text-sm">–</p></div>
+        <div><p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-1">Budget</p><p id="modal-budget" class="font-body text-sm">–</p></div>
+        <div><p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-1">Date</p><p id="modal-date" class="font-body text-sm">–</p></div>
+      </div>
+      <div><p class="font-label text-[10px] uppercase tracking-widest text-secondary mb-2">Message</p><p id="modal-message" class="font-body text-sm leading-relaxed bg-surface-container-low p-4">–</p></div>
+      <div class="flex gap-3 flex-wrap pt-2">
+        <button id="modal-mark-replied" onclick="markEnquiry('replied')" class="flex-1 py-3 bg-primary text-on-primary font-label text-xs uppercase tracking-widest hover:bg-secondary transition-colors">Mark as Replied</button>
+        <button id="modal-mark-archived" onclick="markEnquiry('archived')" class="flex-1 py-3 bg-surface-container-high text-on-surface font-label text-xs uppercase tracking-widest hover:bg-surface-container-highest transition-colors">Archive</button>
+        <a id="modal-email-link" href="#" class="flex-1 py-3 bg-secondary text-on-secondary font-label text-xs uppercase tracking-widest hover:bg-primary transition-colors text-center">Reply via Email</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- New Project Modal -->
+<div id="project-modal" data-modal class="fixed inset-0 z-50 items-center justify-center p-4 bg-primary/60 backdrop-blur-sm">
+  <div class="bg-surface max-w-xl w-full">
+    <div class="flex items-center justify-between p-6 border-b border-outline-variant/20">
+      <h2 id="project-modal-title" class="font-headline italic text-2xl">New Project</h2>
+      <button onclick="closeModal('project-modal')" class="material-symbols-outlined text-on-surface-variant hover:text-primary">close</button>
+    </div>
+    <form id="project-form" onsubmit="saveProject(event)" class="p-6 space-y-5">
+      <input type="hidden" id="project-id"/>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-2"><label class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-1">Project Title *</label><input id="proj-title" type="text" required class="w-full border-b border-outline bg-transparent py-2 text-sm focus:border-secondary focus:ring-0"/></div>
+        <div><label class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-1">Client *</label><input id="proj-client" type="text" required class="w-full border-b border-outline bg-transparent py-2 text-sm focus:border-secondary focus:ring-0"/></div>
+        <div><label class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-1">Service</label><input id="proj-service" type="text" class="w-full border-b border-outline bg-transparent py-2 text-sm focus:border-secondary focus:ring-0"/></div>
+        <div>
+          <label class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-1">Status</label>
+          <select id="proj-status" class="w-full border-b border-outline bg-transparent py-2 text-sm focus:border-secondary focus:ring-0 appearance-none">
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="completed">Completed</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </div>
+        <div>
+          <label class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-1">Phase</label>
+          <select id="proj-phase" class="w-full border-b border-outline bg-transparent py-2 text-sm focus:border-secondary focus:ring-0 appearance-none">
+            <option>Discovery</option><option>Design</option><option>Development</option><option>Review</option><option>Launched</option>
+          </select>
+        </div>
+        <div><label class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-1">Progress %</label><input id="proj-progress" type="number" min="0" max="100" value="0" class="w-full border-b border-outline bg-transparent py-2 text-sm focus:border-secondary focus:ring-0"/></div>
+        <div><label class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-1">Value (R)</label><input id="proj-value" type="number" step="100" class="w-full border-b border-outline bg-transparent py-2 text-sm focus:border-secondary focus:ring-0"/></div>
+        <div class="col-span-2"><label class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-1">Deadline</label><input id="proj-deadline" type="date" class="w-full border-b border-outline bg-transparent py-2 text-sm focus:border-secondary focus:ring-0"/></div>
+        <div class="col-span-2"><label class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-1">Notes</label><textarea id="proj-notes" rows="3" class="w-full border-b border-outline bg-transparent py-2 text-sm focus:border-secondary focus:ring-0 resize-none"></textarea></div>
+      </div>
+      <div class="flex gap-3 pt-2">
+        <button type="submit" class="flex-1 py-3 bg-primary text-on-primary font-label text-xs uppercase tracking-widest hover:bg-secondary transition-colors" id="proj-submit-btn">Save Project</button>
+        <button type="button" onclick="closeModal('project-modal')" class="flex-1 py-3 bg-surface-container-high text-on-surface font-label text-xs uppercase tracking-widest">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// SUPABASE CONFIG
+// ============================================================
+const SUPABASE_URL = 'https://rlttjpreubmpmbvdntlh.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJsdHRqcHJldWJtcG1idmRudGxoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQzOTE4NDcsImV4cCI6MjA4OTk2Nzg0N30.ab37zGuUHiXvr2XK3C2gOWLxwGBJTgMP7LVmzGnijrc';
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+let allEnquiries = [];
+let allProjects = [];
+let currentEnquiryId = null;
+let currentFilter = 'all';
+
+// ============================================================
+// AUTH GUARD
+// ============================================================
+async function init() {
+  const { data: { session } } = await sb.auth.getSession();
+  if (!session) {
+    // Demo mode: bypass auth for preview
+    console.log('No session — running in demo mode');
+  } else {
+    document.getElementById('user-email').textContent = session.user.email;
+  }
+  document.getElementById('auth-loading').classList.add('hidden');
+  document.getElementById('app').classList.remove('hidden');
+  document.getElementById('app').classList.add('flex');
+  await Promise.all([loadInbox(), loadProjects(), loadMessages()]);
+  updateStats();
+}
+
+async function handleLogout() {
+  await sb.auth.signOut();
+  window.location.href = 'login.html';
+}
+
+// ============================================================
+// NAV / TABS
+// ============================================================
+function switchTab(name) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => {
+    n.classList.remove('active');
+    n.classList.add('text-on-primary-container');
+    n.classList.remove('text-on-primary');
+  });
+  document.getElementById('tab-' + name).classList.add('active');
+  const btn = document.querySelector(`[data-tab="${name}"]`);
+  if (btn) { btn.classList.add('active'); btn.classList.add('text-on-primary'); }
+  const titles = { overview:'Overview', inbox:'Enquiries Inbox', projects:'Project Tracker', messages:'Messages' };
+  document.getElementById('page-title').textContent = titles[name];
+}
+
+// ============================================================
+// INBOX
+// ============================================================
+async function loadInbox() {
+  const { data, error } = await sb.from('contact_submissions').select('*').order('created_at', { ascending: false });
+  if (error) { console.error('Inbox error:', error); return; }
+  allEnquiries = data || [];
+  renderInbox(allEnquiries);
+  renderOverviewInbox(allEnquiries.slice(0, 5));
+  const newCount = allEnquiries.filter(e => e.status === 'new').length;
+  const badge = document.getElementById('inbox-badge');
+  if (newCount > 0) { badge.textContent = newCount; badge.classList.remove('hidden'); } else { badge.classList.add('hidden'); }
+}
+
+function renderInbox(items) {
+  const el = document.getElementById('inbox-list');
+  if (!items.length) { el.innerHTML = '<div class="bg-surface p-8 text-center text-on-surface-variant font-label text-xs uppercase tracking-widest">No enquiries yet</div>'; return; }
+  el.innerHTML = items.map(e => `
+    <div class="bg-surface p-5 cursor-pointer hover:bg-surface-container transition-colors border-l-4 ${e.status === 'new' ? 'border-secondary' : e.status === 'replied' ? 'border-primary' : 'border-outline-variant/30'}" onclick="openEnquiry('${e.id}')">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-3 mb-1 flex-wrap">
+            <p class="font-headline italic text-lg">${e.name}</p>
+            <span class="status-${e.status} px-2 py-0.5 font-label text-[9px] uppercase tracking-widest">${e.status}</span>
+          </div>
+          <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">${e.email} · ${e.service || '—'} · ${e.budget || '—'}</p>
+          <p class="text-sm text-on-surface-variant truncate max-w-lg">${e.message || ''}</p>
+        </div>
+        <p class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant opacity-60 flex-shrink-0">${new Date(e.created_at).toLocaleDateString('en-ZA')}</p>
+      </div>
+    </div>`).join('');
+}
+
+function renderOverviewInbox(items) {
+  const el = document.getElementById('overview-inbox');
+  if (!items.length) { el.innerHTML = '<div class="p-8 text-center text-on-surface-variant font-label text-xs uppercase tracking-widest">No enquiries yet</div>'; return; }
+  el.innerHTML = items.map(e => `
+    <div class="p-4 flex items-center justify-between gap-4 hover:bg-surface-container-low transition-colors cursor-pointer" onclick="switchTab('inbox');openEnquiry('${e.id}')">
+      <div class="flex items-center gap-4 min-w-0">
+        <div class="w-8 h-8 bg-secondary-container flex items-center justify-center text-on-secondary-container font-headline italic flex-shrink-0">${e.name.charAt(0)}</div>
+        <div class="min-w-0">
+          <p class="font-body text-sm font-medium">${e.name}</p>
+          <p class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">${e.service || '—'}</p>
+        </div>
+      </div>
+      <span class="status-${e.status} px-2 py-0.5 font-label text-[9px] uppercase tracking-widest flex-shrink-0">${e.status}</span>
+    </div>`).join('');
+}
+
+function filterInbox(type) {
+  document.querySelectorAll('[id^="inbox-filter-"]').forEach(b => { b.classList.remove('bg-primary', 'text-on-primary'); b.classList.add('bg-surface', 'text-on-surface'); });
+  document.getElementById('inbox-filter-' + type).classList.add('bg-primary', 'text-on-primary');
+  document.getElementById('inbox-filter-' + type).classList.remove('bg-surface', 'text-on-surface');
+  const filtered = type === 'all' ? allEnquiries : allEnquiries.filter(e => e.status === type);
+  renderInbox(filtered);
+}
+
+function openEnquiry(id) {
+  const e = allEnquiries.find(x => x.id === id);
+  if (!e) return;
+  currentEnquiryId = id;
+  document.getElementById('modal-name').textContent = e.name;
+  document.getElementById('modal-email').textContent = e.email;
+  document.getElementById('modal-service').textContent = e.service || '—';
+  document.getElementById('modal-budget').textContent = e.budget || '—';
+  document.getElementById('modal-date').textContent = new Date(e.created_at).toLocaleDateString('en-ZA', { dateStyle: 'long' });
+  document.getElementById('modal-message').textContent = e.message || '(No message)';
+  document.getElementById('modal-email-link').href = `mailto:${e.email}?subject=Re: ${e.service} enquiry&body=Hi ${e.name.split(' ')[0]},`;
+  document.getElementById('enquiry-modal').classList.add('open');
+  // Mark as read
+  if (e.status === 'new') { sb.from('contact_submissions').update({ status: 'read' }).eq('id', id).then(() => { e.status = 'read'; loadInbox(); }); }
+}
+
+async function markEnquiry(status) {
+  if (!currentEnquiryId) return;
+  await sb.from('contact_submissions').update({ status }).eq('id', currentEnquiryId);
+  closeModal('enquiry-modal');
+  loadInbox();
+}
+
+// ============================================================
+// PROJECTS
+// ============================================================
+async function loadProjects() {
+  const { data, error } = await sb.from('projects').select('*').order('created_at', { ascending: false });
+  if (error) { console.error('Projects error:', error); return; }
+  allProjects = data || [];
+  renderProjects(allProjects);
+  renderOverviewProjects(allProjects.filter(p => p.status === 'active').slice(0, 4));
+}
+
+function renderProjects(items) {
+  const el = document.getElementById('projects-list');
+  if (!items.length) { el.innerHTML = '<div class="bg-surface p-8 text-center text-on-surface-variant font-label text-xs uppercase tracking-widest">No projects yet. Click "New Project" to add one.</div>'; return; }
+  el.innerHTML = items.map(p => `
+    <div class="bg-surface p-5">
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-3 mb-1 flex-wrap">
+            <p class="font-headline italic text-lg">${p.title}</p>
+            <span class="phase-${p.phase} px-2 py-0.5 font-label text-[9px] uppercase tracking-widest">${p.phase}</span>
+            <span class="project-status-${p.status} px-2 py-0.5 font-label text-[9px] uppercase tracking-widest">${p.status}</span>
+          </div>
+          <p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">${p.client} · ${p.service || '—'}${p.deadline ? ' · Due ' + new Date(p.deadline).toLocaleDateString('en-ZA') : ''}${p.value ? ' · R' + Number(p.value).toLocaleString('en-ZA') : ''}</p>
+        </div>
+        <div class="flex gap-2 flex-shrink-0">
+          <button onclick="editProject('${p.id}')" class="material-symbols-outlined text-sm text-on-surface-variant hover:text-secondary transition-colors p-2">edit</button>
+          <button onclick="deleteProject('${p.id}')" class="material-symbols-outlined text-sm text-on-surface-variant hover:text-error transition-colors p-2">delete</button>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="flex-1 bg-surface-container-high h-1.5">
+          <div class="bg-secondary h-1.5 transition-all duration-500" style="width:${p.progress_pct || 0}%"></div>
+        </div>
+        <span class="font-label text-[10px] uppercase tracking-widest text-secondary w-8 text-right">${p.progress_pct || 0}%</span>
+      </div>
+    </div>`).join('');
+}
+
+function renderOverviewProjects(items) {
+  const el = document.getElementById('overview-projects');
+  if (!items.length) { el.innerHTML = '<div class="p-8 text-center text-on-surface-variant font-label text-xs uppercase tracking-widest">No active projects</div>'; return; }
+  el.innerHTML = items.map(p => `
+    <div class="p-4 hover:bg-surface-container-low transition-colors cursor-pointer" onclick="switchTab('projects')">
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <div>
+          <p class="font-body text-sm font-medium">${p.title}</p>
+          <p class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">${p.client} · ${p.phase}</p>
+        </div>
+        <span class="font-label text-xs text-secondary font-bold">${p.progress_pct || 0}%</span>
+      </div>
+      <div class="bg-surface-container-high h-1">
+        <div class="bg-secondary h-1 transition-all" style="width:${p.progress_pct || 0}%"></div>
+      </div>
+    </div>`).join('');
+}
+
+function filterProjects(type) {
+  document.querySelectorAll('[id^="proj-filter-"]').forEach(b => { b.classList.remove('bg-primary', 'text-on-primary'); b.classList.add('bg-surface', 'text-on-surface'); });
+  document.getElementById('proj-filter-' + type).classList.add('bg-primary', 'text-on-primary');
+  document.getElementById('proj-filter-' + type).classList.remove('bg-surface', 'text-on-surface');
+  const filtered = type === 'all' ? allProjects : allProjects.filter(p => p.status === type);
+  renderProjects(filtered);
+}
+
+function openProjectModal(project = null) {
+  document.getElementById('project-form').reset();
+  document.getElementById('project-id').value = project ? project.id : '';
+  document.getElementById('project-modal-title').textContent = project ? 'Edit Project' : 'New Project';
+  document.getElementById('proj-submit-btn').textContent = project ? 'Update Project' : 'Save Project';
+  if (project) {
+    document.getElementById('proj-title').value = project.title || '';
+    document.getElementById('proj-client').value = project.client || '';
+    document.getElementById('proj-service').value = project.service || '';
+    document.getElementById('proj-status').value = project.status || 'active';
+    document.getElementById('proj-phase').value = project.phase || 'Discovery';
+    document.getElementById('proj-progress').value = project.progress_pct || 0;
+    document.getElementById('proj-value').value = project.value || '';
+    document.getElementById('proj-deadline').value = project.deadline || '';
+    document.getElementById('proj-notes').value = project.notes || '';
+  }
+  document.getElementById('project-modal').classList.add('open');
+}
+
+function editProject(id) {
+  const p = allProjects.find(x => x.id === id);
+  if (p) openProjectModal(p);
+}
+
+async function deleteProject(id) {
+  if (!confirm('Delete this project?')) return;
+  await sb.from('projects').delete().eq('id', id);
+  loadProjects(); updateStats();
+}
+
+async function saveProject(e) {
+  e.preventDefault();
+  const id = document.getElementById('project-id').value;
+  const payload = {
+    title: document.getElementById('proj-title').value,
+    client: document.getElementById('proj-client').value,
+    service: document.getElementById('proj-service').value,
+    status: document.getElementById('proj-status').value,
+    phase: document.getElementById('proj-phase').value,
+    progress_pct: parseInt(document.getElementById('proj-progress').value) || 0,
+    value: parseFloat(document.getElementById('proj-value').value) || null,
+    deadline: document.getElementById('proj-deadline').value || null,
+    notes: document.getElementById('proj-notes').value,
+  };
+  if (id) { await sb.from('projects').update(payload).eq('id', id); }
+  else { await sb.from('projects').insert([payload]); }
+  closeModal('project-modal');
+  loadProjects(); updateStats();
+}
+
+// ============================================================
+// MESSAGES
+// ============================================================
+async function loadMessages() {
+  const { data, error } = await sb.from('messages').select('*').order('created_at', { ascending: false });
+  if (error) { console.error('Messages error:', error); return; }
+  const el = document.getElementById('messages-list');
+  const msgs = data || [];
+  if (!msgs.length) { el.innerHTML = '<div class="bg-surface p-8 text-center text-on-surface-variant font-label text-xs uppercase tracking-widest">No messages yet</div>'; return; }
+  el.innerHTML = msgs.map(m => `
+    <div class="bg-surface p-6 ${!m.is_read ? 'border-l-4 border-secondary' : ''}">
+      <div class="flex items-start justify-between gap-4 mb-3">
+        <h3 class="font-headline italic text-xl">${m.subject}</h3>
+        <span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant opacity-60 flex-shrink-0">${new Date(m.created_at).toLocaleDateString('en-ZA')}</span>
+      </div>
+      <p class="text-sm text-on-surface-variant leading-relaxed">${m.body || ''}</p>
+    </div>`).join('');
+}
+
+// ============================================================
+// STATS
+// ============================================================
+function updateStats() {
+  const newCount = allEnquiries.filter(e => e.status === 'new').length;
+  const activeCount = allProjects.filter(p => p.status === 'active').length;
+  const completedCount = allProjects.filter(p => p.status === 'completed').length;
+  const pipeline = allProjects.filter(p => p.status === 'active').reduce((s, p) => s + (Number(p.value) || 0), 0);
+  document.getElementById('stat-new-enquiries').textContent = newCount;
+  document.getElementById('stat-active-projects').textContent = activeCount;
+  document.getElementById('stat-completed').textContent = completedCount;
+  document.getElementById('stat-pipeline').textContent = pipeline ? 'R' + pipeline.toLocaleString('en-ZA') : '—';
+}
+
+// ============================================================
+// MODALS
+// ============================================================
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { document.querySelectorAll('[data-modal].open').forEach(m => m.classList.remove('open')); } });
+document.querySelectorAll('[data-modal]').forEach(m => m.addEventListener('click', e => { if (e.target === m) m.classList.remove('open'); }));
+
+// ============================================================
+// INIT
+// ============================================================
+init();
+</script>
 </body>
 </html>
