@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>List a Property | The Editorial Estate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config={theme:{extend:{colors:{"primary":"#000c1e","secondary":"#735c00","tertiary":"#23000a","background":"#f8f9fa","surface-container-low":"#f3f4f5","outline":"#74777f"}}}}</script>
+<style>.material-symbols-outlined{vertical-align:middle;}body{font-family:'Manrope',sans-serif;padding-bottom:56px;}input,select,textarea{font-family:'Manrope',sans-serif;}</style>
+</head>
+<body class="bg-background">
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-white/80 backdrop-blur-xl shadow-sm z-50"><a class="text-2xl font-serif italic text-primary" href="index.html">The Editorial Estate</a><a href="profile.html" class="bg-primary text-white px-6 py-2.5 rounded-lg text-xs tracking-widest uppercase">My Account</a></nav>
+<main class="pt-24 min-h-screen px-8 lg:px-20 py-14 max-w-4xl mx-auto">
+  <h1 class="text-4xl font-serif font-bold text-primary mb-10">Curate Your Listing</h1>
+  <form class="space-y-12">
+    <section class="space-y-8"><h2 class="text-2xl font-serif font-bold text-primary">Property Details</h2><div class="grid grid-cols-2 gap-6"><div><label class="block text-[10px] font-bold uppercase tracking-widest text-outline mb-2">Property Title</label><input class="w-full bg-surface-container-low border-none rounded-lg py-3 px-4 text-sm" type="text" placeholder="e.g. The Obsidian Villa"/></div><div><label class="block text-[10px] font-bold uppercase tracking-widest text-outline mb-2">Asking Price (ZAR)</label><input class="w-full bg-surface-container-low border-none rounded-lg py-3 px-4 text-sm" type="text" placeholder="R 18,500,000"/></div></div></section>
+    <section class="space-y-8"><h2 class="text-2xl font-serif font-bold text-primary">Specifications</h2><div class="grid grid-cols-2 md:grid-cols-4 gap-4"><div class="bg-surface-container-low p-6 text-center rounded-lg"><span class="material-symbols-outlined text-primary text-3xl mb-3 block">bed</span><label class="block text-[10px] font-bold uppercase tracking-widest text-inherit opacity-70 mb-2">Bedrooms</label><input class="w-full bg-transparent text-center font-serif text-2xl font-bold border-b border-gray-300 pb-1 focus:outline-none" type="number" value="5"/></div></div></section>
+    <div class="flex"><button type="submit" class="w-full bg-tertiary text-white py-4 rounded-lg font-label text-xs font-bold uppercase tracking-widest">Publish</button></div>
+  </form>
+</main>
+<div class="fixed bottom-0 left-0 right-0 z-[9999] flex items-center justify-between px-6 py-3" style="background:#000c1e;font-family:'Manrope',sans-serif;"><div class="flex items-center gap-4"><span style="color:#e9c349;font-size:9px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;">⚡ Century Capital Demo</span><span style="color:rgba(255,255,255,0.35);font-size:9px;">Multi-step Property Listing Flow</span></div><div class="flex items-center gap-4"><a href="index.html" style="background:#735c00;color:#fff;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:6px 16px;text-decoration:none;">Feature Tour</a><a href="../../index.html" style="color:rgba(255,255,255,0.4);font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;">← Portfolio</a></div></div>
+</body>
+</html>

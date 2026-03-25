@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Editorial Estate | Curated South African Heritage Properties</title>
+<meta name="description" content="A Century Capital showcase: luxury South African real estate platform demonstrating property discovery, agent CRM, and premium UX."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","primary":"#000c1e","tertiary":"#23000a","tertiary-fixed":"#ffd9e0","error":"#ba1a1a","secondary-fixed-dim":"#e9c349","secondary-fixed":"#ffe088","primary-container":"#002344","background":"#f8f9fa","outline":"#74777f","outline-variant":"#c3c6cf","error-container":"#ffdad6","on-error":"#ffffff","secondary-container":"#fed65b","on-background":"#191c1d","on-tertiary-container":"#de5f84","surface":"#f8f9fa","surface-container-highest":"#e1e3e4","on-surface":"#191c1d","surface-container-high":"#e7e8e9","on-primary-container":"#708bb2","on-secondary-container":"#745c00","on-tertiary":"#ffffff","surface-variant":"#e1e3e4","surface-container-low":"#f3f4f5","on-primary":"#ffffff","on-surface-variant":"#43474e","secondary":"#735c00","tertiary-container":"#4c001f","inverse-surface":"#2e3132","surface-container":"#edeeef","primary-fixed":"#d3e3ff","on-secondary":"#ffffff","surface-bright":"#f8f9fa"},fontFamily:{headline:["Noto Serif","serif"],body:["Manrope","sans-serif"],label:["Manrope","sans-serif"]},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"}}}}
+</script>
+<style>.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}.serif-italic{font-family:'Noto Serif',serif;font-style:italic;}body{padding-bottom:56px;}</style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+<header class="fixed top-0 w-full flex justify-between items-center px-8 py-4 max-w-[1920px] mx-auto bg-white/80 backdrop-blur-xl z-50 shadow-[0_24px_24px_rgba(0,12,30,0.04)]">
+  <div class="flex items-center gap-12">
+    <a class="text-2xl font-serif italic tracking-tight text-[#000c1e]" href="index.html">The Editorial Estate</a>
+    <nav class="hidden md:flex gap-8 items-center">
+      <a class="text-[#735c00] font-bold border-b-2 border-[#735c00] pb-1 uppercase text-xs tracking-[0.05em]" href="search.html">Buy</a>
+      <a class="text-[#191c1d] hover:text-[#735c00] uppercase text-xs tracking-[0.05em]" href="list-property.html">Sell</a>
+      <a class="text-[#191c1d] hover:text-[#735c00] uppercase text-xs tracking-[0.05em]" href="search.html">Rent</a>
+      <a class="text-[#191c1d] hover:text-[#735c00] uppercase text-xs tracking-[0.05em]" href="agent-dashboard.html">Find an Agent</a>
+    </nav>
+  </div>
+  <div class="flex items-center gap-6">
+    <a href="profile.html" class="text-[#191c1d] font-label text-xs uppercase tracking-[0.05em] hover:opacity-80">Login</a>
+    <a href="list-property.html" class="bg-primary text-white px-6 py-2 rounded-md font-label text-xs uppercase tracking-[0.05em] hover:opacity-90">List a Property</a>
+  </div>
+</header>
+<aside class="hidden lg:flex flex-col h-screen w-64 fixed left-0 top-0 pt-24 pb-8 bg-[#f5f7f9] z-40">
+  <div class="px-6 mb-8"><h2 class="font-headline text-xl text-[#000c1e]">Welcome back</h2><p class="text-xs text-slate-500 font-label">Premium Curator</p></div>
+  <nav class="flex-1 space-y-1">
+    <a class="flex items-center gap-4 px-6 py-3 bg-white text-[#735c00] rounded-r-full font-bold" href="index.html"><span class="material-symbols-outlined">explore</span><span class="text-sm">Discovery</span></a>
+    <a class="flex items-center gap-4 px-6 py-3 text-slate-600 hover:bg-slate-100 hover:translate-x-1 transition-transform" href="profile.html"><span class="material-symbols-outlined">favorite</span><span class="text-sm">Saved Homes</span></a>
+    <a class="flex items-center gap-4 px-6 py-3 text-slate-600 hover:bg-slate-100 hover:translate-x-1 transition-transform" href="agent-dashboard.html"><span class="material-symbols-outlined">maps_home_work</span><span class="text-sm">My Listings</span></a>
+  </nav>
+  <div class="px-6 mt-auto space-y-4">
+    <button onclick="document.getElementById('cc-tour').style.display='flex'" class="w-full bg-secondary-container text-on-secondary-container py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:opacity-90"><span class="material-symbols-outlined text-sm">grade</span>Upgrade to Elite</button>
+  </div>
+</aside>
+<main class="lg:ml-64 pt-16">
+  <section class="relative h-[870px] w-full overflow-hidden flex items-center px-8 md:px-20">
+    <div class="absolute inset-0 z-0">
+      <img alt="Luxury South African Estate" class="w-full h-full object-cover grayscale-[20%] brightness-[85%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKuJ2Zwcc1EzvolD67Su0MdsV44li3msNC2WrjkzSvwVM-ZilQzswJGcPGG8Up7uwAAlfXEo4UYUYMEfNmux4NXBVn56_pAC76zwCxOdYY8RLIzC7DSHGu_RzLrfQiBXE4KgKqbRBr2NOaRM-v55LiS2vakA-9x2N9qUw7SoMInWKpOmTFMmIAEnhFObYQ8CkcMAQgiJakcCbR4P_s61VtlFHquAhRWKXulZk_sNxmqvRZnrIFAIcqynamHcKPK32d27VrzymsxgBe"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl">
+      <h1 class="font-headline text-5xl md:text-7xl text-white mb-6 -tracking-[0.02em] leading-tight">Where Heritage <br/><span class="serif-italic">Meets Tomorrow.</span></h1>
+      <div class="mt-12 bg-white/90 backdrop-blur-xl p-2 rounded-xl shadow-2xl flex flex-col md:flex-row items-center gap-2 max-w-3xl">
+        <div class="flex-1 flex items-center px-4 w-full"><span class="material-symbols-outlined text-outline">search</span><input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline p-4 font-body" placeholder="Search Cape Town, Sandton, Umhlanga..." type="text"/></div>
+        <div class="h-8 w-px bg-outline-variant hidden md:block"></div>
+        <div class="flex items-center px-4 w-full md:w-auto"><span class="material-symbols-outlined text-outline">location_on</span><select class="bg-transparent border-none focus:ring-0 text-on-surface font-body p-4 min-w-[140px]"><option>Buy</option><option>Rent</option></select></div>
+        <a href="search.html" class="w-full md:w-auto bg-tertiary text-white px-10 py-4 rounded-lg font-label uppercase text-sm tracking-widest hover:bg-primary transition-colors text-center">Discover</a>
+      </div>
+      <div class="mt-8 flex gap-4 overflow-x-auto pb-4">
+        <span class="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-white text-xs border border-white/20 whitespace-nowrap">Cape Town Properties</span>
+        <span class="px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-white text-xs border border-white/20 whitespace-nowrap">Johannesburg Luxury</span>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 px-8 md:px-20 bg-surface">
+    <div class="flex justify-between items-end mb-16">
+      <div><p class="text-secondary font-label uppercase tracking-[0.2em] text-xs mb-4">The Selection</p><h2 class="font-headline text-4xl text-primary">Featured Properties</h2></div>
+      <a class="text-tertiary-container font-bold border-b-2 border-tertiary-container pb-1 hover:text-on-tertiary-container transition-colors" href="search.html">View the Collection</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto lg:h-[800px]">
+      <div class="md:col-span-8 group cursor-pointer overflow-hidden relative rounded-xl">
+        <img alt="Luxury Villa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBFTwTNtFIA6SSmKujU-fQqHP13udfmlqiRUcil5vH0IehCZtdHby1WqzIYUaWaN6n3CHK4HsuPc3LJV3ziq2ai0E_7Y4hqaGqi5VSGwdG0cDQPdpxZ-P0IemNjfi1rnFDzpR18rCxPe-hU6KjCgb4HDApU-p-Yys-kkkUdg-OXU2UQpAulR0-zCA8IOdToq_6dGwf193IUWUqraMMm2xhKVsKBRBVKPLilmMYuKI5RCSH9exFPdHVR45gHz-uCpNQup89AGwdCHM2"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
+        <div class="absolute bottom-0 left-0 p-10 text-white">
+          <span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-sm text-[10px] uppercase font-bold tracking-widest mb-4 inline-block">Exclusive Listing</span>
+          <h3 class="font-headline text-3xl mb-2">The Constantia Heights Estate</h3>
+          <p class="text-white/80 font-light mb-6">Cape Town, Western Cape</p>
+          <a href="property-detail.html" class="inline-flex gap-8 text-sm hover:underline"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-lg">bed</span>6 Beds</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-lg">bathtub</span>5 Baths</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-lg">square_foot</span>850m²</span></a>
+        </div>
+      </div>
+      <div class="md:col-span-4 flex flex-col gap-8">
+        <a href="property-detail.html" class="flex-1 group cursor-pointer overflow-hidden relative rounded-xl">
+          <img alt="Luxury Apartment" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChM1F3VdPe1x2bdGZf3C09kHcKZwIK9e_ZGrjg_lA-7Kj3Fe-2abLMRmEEjE6ptLxX9Pcz6IG5qCszgy_w3h87wWtbGQDG2VIIbt0iOfO1P14jGyFAZ9YoqNm4gzeeN1hl9F7uZ_9r2_EvgVmffrye7ni6-geUkpix22u2lfrqAXvZD0NBStn6wqaFYQX8CbP2RdgabiPt_igdkcnRYTxdNGQEjmiNLqCDxkt1yyTcSWby1GadfbbDMOOd8o0FLGc7GFUhKdV7NCAV"/>
+          <div class="absolute top-6 right-6"><span class="bg-surface-container-lowest text-primary px-3 py-1 rounded-sm text-[10px] uppercase font-bold tracking-widest">New Development</span></div>
+          <div class="absolute bottom-0 left-0 p-6 text-white w-full bg-gradient-to-t from-primary/70 to-transparent"><h4 class="font-headline text-xl">The Leonardo Penthouse</h4><p class="text-xs text-white/70">Sandton, Johannesburg</p></div>
+        </a>
+        <a href="property-detail.html" class="flex-1 group cursor-pointer overflow-hidden relative rounded-xl">
+          <img alt="Modern Beach House" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6cH9MCRQvyiX7vRjHBwgJNY-mtTegWt5-D_DRPwLzN6Gh8oQ8ma2RmVoKRmrZBgdR7Arm0BJEvOFln54laFb7hg0jyAyJ9DMGpo2LWFXv03PNxhp9Guy6H4e8xW8MfHWIqgiurytwz-r_wa5iMUKtXKgogKXi4GK0S9mcsc_axCnD17AHbT_BhvshYd4-JOTMka3sf_yk-t6gZuT7wemtdh7--nnWHCi6aXL2ly23tpwV7qPIZ9Qgr-azC6-GYopLZ-0KymioZjiI"/>
+          <div class="absolute bottom-0 left-0 p-6 text-white w-full bg-gradient-to-t from-primary/70 to-transparent"><h4 class="font-headline text-xl">Azure Shores Villa</h4><p class="text-xs text-white/70">Umhlanga, KwaZulu-Natal</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 px-8 md:px-20 bg-primary text-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-headline text-4xl mb-6">Ready to list your estate?</h2>
+      <p class="text-on-primary-container mb-10 text-lg">Join the most exclusive real estate network in South Africa.</p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="list-property.html" class="bg-tertiary-container text-on-tertiary-container px-12 py-4 rounded-md font-label uppercase text-xs tracking-widest hover:bg-tertiary transition-all">Request Valuation</a>
+        <a href="list-property.html" class="bg-transparent border border-white/30 text-white px-12 py-4 rounded-md font-label uppercase text-xs tracking-widest hover:bg-white/10 transition-all">Seller's Guide</a>
+      </div>
+    </div>
+  </section>
+  <footer class="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 bg-[#000c1e] text-white">
+    <div class="md:col-span-1"><span class="text-white font-serif italic text-lg block mb-6">The Editorial Estate</span><p class="text-slate-400 text-sm leading-relaxed mb-6">A Curated Heritage Brand focusing on South Africa's most prestigious real estate.</p></div>
+    <div><h6 class="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 mb-6">Quick Links</h6><ul class="space-y-3"><li><a class="text-slate-400 hover:text-white text-sm" href="search.html">Cape Town Properties</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="search.html">Johannesburg Luxury</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="search.html">Durban Beachfront</a></li></ul></div>
+    <div><h6 class="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 mb-6">Explore</h6><ul class="space-y-3"><li><a class="text-slate-400 hover:text-white text-sm" href="agent-dashboard.html">Agent Dashboard</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="profile.html">My Profile</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="list-property.html">List a Property</a></li></ul></div>
+    <div><h6 class="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 mb-6">Contact</h6><p class="text-slate-400 text-sm mb-4">12 Long Street, Cape Town<br/>+27 21 444 5555</p></div>
+    <div class="md:col-span-4 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4"><p class="text-slate-400 text-xs">© 2026 The Editorial Estate. A Curated Heritage Brand.</p></div>
+  </footer>
+</main>
+<button onclick="document.getElementById('cc-tour').style.display='flex'" class="fixed bottom-20 right-8 bg-tertiary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-110 transition-transform"><span class="material-symbols-outlined">chat_bubble</span></button>
+<div class="fixed bottom-0 left-0 right-0 z-[9999] flex items-center justify-between px-6 py-3" style="background:#000c1e;font-family:'Manrope',sans-serif;">
+  <div class="flex items-center gap-4"><span style="color:#e9c349;font-size:9px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;">⚡ Century Capital Demo</span><span style="color:rgba(255,255,255,0.35);font-size:9px;letter-spacing:0.1em;">The Editorial Estate — Luxury Real Estate Platform</span></div>
+  <div class="flex items-center gap-4"><button onclick="document.getElementById('cc-tour').style.display='flex'" style="background:#735c00;color:#fff;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:6px 16px;border:none;cursor:pointer;">Feature Tour</button><a href="../../index.html" style="color:rgba(255,255,255,0.4);font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;">← Portfolio</a></div>
+</div>
+<div id="cc-tour" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,12,30,0.88);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:white;max-width:680px;width:100%;position:relative;max-height:90vh;overflow-y:auto;">
+    <div style="background:#000c1e;padding:32px 40px 24px;position:relative;"><button onclick="document.getElementById('cc-tour').style.display='none'" style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.1);border:none;color:white;width:32px;height:32px;cursor:pointer;font-size:16px;">✕</button><p style="font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#e9c349;margin-bottom:8px;font-family:'Manrope',sans-serif;">Century Capital · Showcase Demo</p><h2 style="font-family:'Noto Serif',serif;font-size:2rem;color:white;font-weight:700;margin:0 0 8px;">The Editorial Estate</h2><p style="color:rgba(255,255,255,0.5);font-size:13px;font-family:'Manrope',sans-serif;margin:0;">Luxury Real Estate Platform · South Africa</p></div>
+    <div style="padding:32px 40px;"><p style="color:#43474e;font-size:14px;line-height:1.8;margin-bottom:28px;font-family:'Manrope',sans-serif;">This is a fully functional real estate platform built to demonstrate Century Capital's capability to deliver complex, premium web applications. Every component is interactive and the design system is consistent across all 6 screens.</p>
+      <div style="display:grid;gap:16px;margin-bottom:28px;">
+        <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">🏠 Homepage Discovery</p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">Hero search, bento property grid, animated hover effects, category filters, seller CTA</p></div>
+        <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">🗺️ <a href="search.html" style="color:#735c00;">Search Results + Map View</a></p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">Split list/map layout, property cards with status tags, interactive map pins, filter bar</p></div>
+        <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">📋 <a href="property-detail.html" style="color:#735c00;">Property Detail Page</a></p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">5-photo bento gallery, virtual tour, location intelligence, agent enquiry form</p></div>
+        <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">📝 <a href="list-property.html" style="color:#735c00;">Multi-step Listing Creation</a></p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">5-step stepper form, live preview card, specifications bento input, narrative field</p></div>
+        <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">📊 <a href="agent-dashboard.html" style="color:#735c00;">Agent CRM Dashboard</a></p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">Analytics bento, lead pipeline, listing performance metrics, team management</p></div>
+        <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">👤 <a href="profile.html" style="color:#735c00;">User Profile & Preferences</a></p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">Saved searches, notification preferences, KYC security, property recommendations</p></div>
+      </div>
+      <div style="background:#000c1e;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;"><div><p style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin:0 0 4px;font-family:'Manrope',sans-serif;">Built by</p><p style="color:#e9c349;font-size:14px;font-weight:700;font-family:'Manrope',sans-serif;margin:0;">Century Capital</p></div><a href="../../contact.html" style="background:#735c00;color:white;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:12px 28px;text-decoration:none;display:inline-block;font-family:'Manrope',sans-serif;">Want This Built? →</a></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
