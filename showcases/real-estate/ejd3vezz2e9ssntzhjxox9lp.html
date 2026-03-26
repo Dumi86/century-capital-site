@@ -13,31 +13,34 @@
 </script>
 <style>.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}.serif-italic{font-family:'Noto Serif',serif;font-style:italic;}body{padding-bottom:56px;}</style>
 </head>
-<body class="bg-surface text-on-surface font-body">
-<header class="fixed top-0 w-full flex justify-between items-center px-8 py-4 max-w-[1920px] mx-auto bg-white/80 backdrop-blur-xl z-50 shadow-[0_24px_24px_rgba(0,12,30,0.04)]">
+<body class="bg-surface dark:bg-[#000c1e] text-on-surface dark:text-[#e1e3e4] font-body">
+<header class="fixed top-0 w-full flex justify-between items-center px-8 py-4 max-w-[1920px] mx-auto bg-white/80 dark:bg-[#000c1e]/80 backdrop-blur-xl z-50 shadow-[0_24px_24px_rgba(0,12,30,0.04)]">
   <div class="flex items-center gap-12">
     <a class="text-2xl font-serif italic tracking-tight text-[#000c1e]" href="ejd3vezz2e9ssntzhjxox9lp.html">The Editorial Estate</a>
     <nav class="hidden md:flex gap-8 items-center">
       <a class="text-[#735c00] font-bold border-b-2 border-[#735c00] pb-1 uppercase text-xs tracking-[0.05em]" href="vkn0jpk48dy5ysaf3608b8k3.html">Buy</a>
-      <a class="text-[#191c1d] hover:text-[#735c00] uppercase text-xs tracking-[0.05em]" href="4wce04j9s133mo4clb6q35sk.html">Sell</a>
-      <a class="text-[#191c1d] hover:text-[#735c00] uppercase text-xs tracking-[0.05em]" href="vkn0jpk48dy5ysaf3608b8k3.html">Rent</a>
-      <a class="text-[#191c1d] hover:text-[#735c00] uppercase text-xs tracking-[0.05em]" href="nmxpssgmtqrnirsoqzi23tvm.html">Find an Agent</a>
+      <a class="text-[#191c1d] dark:text-[#f8f9fa] hover:text-[#735c00] uppercase text-xs tracking-[0.05em]" href="4wce04j9s133mo4clb6q35sk.html">Sell</a>
+      <a class="text-[#191c1d] dark:text-[#f8f9fa] hover:text-[#735c00] uppercase text-xs tracking-[0.05em]" href="vkn0jpk48dy5ysaf3608b8k3.html">Rent</a>
+      <a class="text-[#191c1d] dark:text-[#f8f9fa] hover:text-[#735c00] uppercase text-xs tracking-[0.05em]" href="nmxpssgmtqrnirsoqzi23tvm.html">Find an Agent</a>
     </nav>
   </div>
   <div class="flex items-center gap-6">
-    <a href="rock9091sft2tzfz8jckyo1y.html" class="text-[#191c1d] font-label text-xs uppercase tracking-[0.05em] hover:opacity-80">Login</a>
-    <a href="4wce04j9s133mo4clb6q35sk.html" class="bg-primary text-white px-6 py-2 rounded-md font-label text-xs uppercase tracking-[0.05em] hover:opacity-90">List a Property</a>
+    
+    <button id="theme-toggle" class="material-symbols-outlined text-[#191c1d] dark:text-[#f8f9fa] dark:text-white hover:text-[#735c00] transition-colors" onclick="toggleTheme()" aria-label="Toggle Dark Mode">dark_mode</button>
+    <a href="rock9091sft2tzfz8jckyo1y.html"
+ class="text-[#191c1d] dark:text-[#f8f9fa] font-label text-xs uppercase tracking-[0.05em] hover:opacity-80">Login</a>
+    <a href="4wce04j9s133mo4clb6q35sk.html" class="bg-primary dark:bg-secondary text-white dark:text-white px-6 py-2 rounded-md font-label text-xs uppercase tracking-[0.05em] hover:opacity-90">List a Property</a>
   </div>
 </header>
-<aside class="hidden lg:flex flex-col h-screen w-64 fixed left-0 top-0 pt-24 pb-8 bg-[#f5f7f9] z-40">
-  <div class="px-6 mb-8"><h2 class="font-headline text-xl text-[#000c1e]">Welcome back</h2><p class="text-xs text-slate-500 font-label">Premium Curator</p></div>
+<aside class="hidden lg:flex flex-col h-screen w-64 fixed left-0 top-0 pt-24 pb-8 bg-[#f5f7f9] dark:bg-[#00132b] z-40">
+  <div class="px-6 mb-8"><h2 class="font-headline text-xl text-[#000c1e]">Welcome back</h2><p class="text-xs text-slate-500 dark:text-slate-400 font-label">Premium Curator</p></div>
   <nav class="flex-1 space-y-1">
-    <a class="flex items-center gap-4 px-6 py-3 bg-white text-[#735c00] rounded-r-full font-bold" href="ejd3vezz2e9ssntzhjxox9lp.html"><span class="material-symbols-outlined">explore</span><span class="text-sm">Discovery</span></a>
-    <a class="flex items-center gap-4 px-6 py-3 text-slate-600 hover:bg-slate-100 hover:translate-x-1 transition-transform" href="rock9091sft2tzfz8jckyo1y.html"><span class="material-symbols-outlined">favorite</span><span class="text-sm">Saved Homes</span></a>
-    <a class="flex items-center gap-4 px-6 py-3 text-slate-600 hover:bg-slate-100 hover:translate-x-1 transition-transform" href="nmxpssgmtqrnirsoqzi23tvm.html"><span class="material-symbols-outlined">maps_home_work</span><span class="text-sm">My Listings</span></a>
+    <a class="flex items-center gap-4 px-6 py-3 bg-white dark:bg-[#000c1e] text-[#735c00] rounded-r-full font-bold" href="ejd3vezz2e9ssntzhjxox9lp.html"><span class="material-symbols-outlined">explore</span><span class="text-sm">Discovery</span></a>
+    <a class="flex items-center gap-4 px-6 py-3 text-slate-600 dark:text-slate-300 hover:bg-slate-100 hover:translate-x-1 transition-transform" href="rock9091sft2tzfz8jckyo1y.html"><span class="material-symbols-outlined">favorite</span><span class="text-sm">Saved Homes</span></a>
+    <a class="flex items-center gap-4 px-6 py-3 text-slate-600 dark:text-slate-300 hover:bg-slate-100 hover:translate-x-1 transition-transform" href="nmxpssgmtqrnirsoqzi23tvm.html"><span class="material-symbols-outlined">maps_home_work</span><span class="text-sm">My Listings</span></a>
   </nav>
   <div class="px-6 mt-auto space-y-4">
-    <button onclick="document.getElementById('cc-tour').style.display='flex'" class="w-full bg-secondary-container text-on-secondary-container py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:opacity-90"><span class="material-symbols-outlined text-sm">grade</span>Upgrade to Elite</button>
+    <button onclick="document.getElementById('cc-tour').style.display='flex'" class="w-full bg-secondary-container dark:bg-[#735c00] text-on-secondary-container py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:opacity-90"><span class="material-symbols-outlined text-sm">grade</span>Upgrade to Elite</button>
   </div>
 </aside>
 <main class="lg:ml-64 pt-16">
@@ -49,9 +52,9 @@
     <div class="relative z-10 max-w-4xl">
       <h1 class="font-headline text-5xl md:text-7xl text-white mb-6 -tracking-[0.02em] leading-tight">Where Heritage <br/><span class="serif-italic">Meets Tomorrow.</span></h1>
       <div class="mt-12 bg-white/90 backdrop-blur-xl p-2 rounded-xl shadow-2xl flex flex-col md:flex-row items-center gap-2 max-w-3xl">
-        <div class="flex-1 flex items-center px-4 w-full"><span class="material-symbols-outlined text-outline">search</span><input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline p-4 font-body" placeholder="Search Cape Town, Sandton, Umhlanga..." type="text"/></div>
+        <div class="flex-1 flex items-center px-4 w-full"><span class="material-symbols-outlined text-outline">search</span><input class="w-full bg-transparent border-none focus:ring-0 text-on-surface dark:text-[#e1e3e4] placeholder:text-outline p-4 font-body" placeholder="Search Cape Town, Sandton, Umhlanga..." type="text"/></div>
         <div class="h-8 w-px bg-outline-variant hidden md:block"></div>
-        <div class="flex items-center px-4 w-full md:w-auto"><span class="material-symbols-outlined text-outline">location_on</span><select class="bg-transparent border-none focus:ring-0 text-on-surface font-body p-4 min-w-[140px]"><option>Buy</option><option>Rent</option></select></div>
+        <div class="flex items-center px-4 w-full md:w-auto"><span class="material-symbols-outlined text-outline">location_on</span><select class="bg-transparent border-none focus:ring-0 text-on-surface dark:text-[#e1e3e4] font-body p-4 min-w-[140px]"><option>Buy</option><option>Rent</option></select></div>
         <a href="vkn0jpk48dy5ysaf3608b8k3.html" class="w-full md:w-auto bg-tertiary text-white px-10 py-4 rounded-lg font-label uppercase text-sm tracking-widest hover:bg-primary transition-colors text-center">Discover</a>
       </div>
       <div class="mt-8 flex gap-4 overflow-x-auto pb-4">
@@ -89,7 +92,7 @@
       </div>
     </div>
   </section>
-  <section class="py-24 px-8 md:px-20 bg-primary text-white text-center">
+  <section class="py-24 px-8 md:px-20 bg-primary dark:bg-secondary text-white dark:text-white text-center">
     <div class="max-w-3xl mx-auto">
       <h2 class="font-headline text-4xl mb-6">Ready to list your estate?</h2>
       <p class="text-on-primary-container mb-10 text-lg">Join the most exclusive real estate network in South Africa.</p>
@@ -101,9 +104,9 @@
   </section>
   <footer class="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 bg-[#000c1e] text-white">
     <div class="md:col-span-1"><span class="text-white font-serif italic text-lg block mb-6">The Editorial Estate</span><p class="text-slate-400 text-sm leading-relaxed mb-6">A Curated Heritage Brand focusing on South Africa's most prestigious real estate.</p></div>
-    <div><h6 class="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 mb-6">Quick Links</h6><ul class="space-y-3"><li><a class="text-slate-400 hover:text-white text-sm" href="vkn0jpk48dy5ysaf3608b8k3.html">Cape Town Properties</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="vkn0jpk48dy5ysaf3608b8k3.html">Johannesburg Luxury</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="vkn0jpk48dy5ysaf3608b8k3.html">Durban Beachfront</a></li></ul></div>
-    <div><h6 class="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 mb-6">Explore</h6><ul class="space-y-3"><li><a class="text-slate-400 hover:text-white text-sm" href="nmxpssgmtqrnirsoqzi23tvm.html">Agent Dashboard</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="rock9091sft2tzfz8jckyo1y.html">My Profile</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="4wce04j9s133mo4clb6q35sk.html">List a Property</a></li></ul></div>
-    <div><h6 class="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 mb-6">Contact</h6><p class="text-slate-400 text-sm mb-4">12 Long Street, Cape Town<br/>+27 21 444 5555</p></div>
+    <div><h6 class="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 dark:text-slate-400 mb-6">Quick Links</h6><ul class="space-y-3"><li><a class="text-slate-400 hover:text-white text-sm" href="vkn0jpk48dy5ysaf3608b8k3.html">Cape Town Properties</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="vkn0jpk48dy5ysaf3608b8k3.html">Johannesburg Luxury</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="vkn0jpk48dy5ysaf3608b8k3.html">Durban Beachfront</a></li></ul></div>
+    <div><h6 class="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 dark:text-slate-400 mb-6">Explore</h6><ul class="space-y-3"><li><a class="text-slate-400 hover:text-white text-sm" href="nmxpssgmtqrnirsoqzi23tvm.html">Agent Dashboard</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="rock9091sft2tzfz8jckyo1y.html">My Profile</a></li><li><a class="text-slate-400 hover:text-white text-sm" href="4wce04j9s133mo4clb6q35sk.html">List a Property</a></li></ul></div>
+    <div><h6 class="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 dark:text-slate-400 mb-6">Contact</h6><p class="text-slate-400 text-sm mb-4">12 Long Street, Cape Town<br/>+27 21 444 5555</p></div>
     <div class="md:col-span-4 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4"><p class="text-slate-400 text-xs">© 2026 The Editorial Estate. A Curated Heritage Brand.</p></div>
   </footer>
 </main>
@@ -122,11 +125,39 @@
         <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">📋 <a href="lhcupymgcquqndyg8gc7xgl4.html" style="color:#735c00;">Property Detail Page</a></p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">5-photo bento gallery, virtual tour, location intelligence, agent enquiry form</p></div>
         <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">📝 <a href="4wce04j9s133mo4clb6q35sk.html" style="color:#735c00;">Multi-step Listing Creation</a></p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">5-step stepper form, live preview card, specifications bento input, narrative field</p></div>
         <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">📊 <a href="nmxpssgmtqrnirsoqzi23tvm.html" style="color:#735c00;">Agent CRM Dashboard</a></p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">Analytics bento, lead pipeline, listing performance metrics, team management</p></div>
-        <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">👤 <a href="rock9091sft2tzfz8jckyo1y.html" style="color:#735c00;">User Profile & Preferences</a></p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">Saved searches, notification preferences, KYC security, property recommendations</p></div>
+        <div style="border-left:3px solid #735c00;padding:12px 16px;background:#f8f9fa;"><p style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#735c00;margin:0 0 4px;font-family:'Manrope',sans-serif;">👤 
+    <button id="theme-toggle" class="material-symbols-outlined text-[#191c1d] dark:text-[#f8f9fa] dark:text-white hover:text-[#735c00] transition-colors" onclick="toggleTheme()" aria-label="Toggle Dark Mode">dark_mode</button>
+    <a href="rock9091sft2tzfz8jckyo1y.html"
+ style="color:#735c00;">User Profile & Preferences</a></p><p style="font-size:13px;color:#43474e;margin:0;font-family:'Manrope',sans-serif;">Saved searches, notification preferences, KYC security, property recommendations</p></div>
       </div>
       <div style="background:#000c1e;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;"><div><p style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin:0 0 4px;font-family:'Manrope',sans-serif;">Built by</p><p style="color:#e9c349;font-size:14px;font-weight:700;font-family:'Manrope',sans-serif;margin:0;">Century Capital</p></div><a href="../../gzc64pbf725a7v2yuaz7r5so.html" style="background:#735c00;color:white;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:12px 28px;text-decoration:none;display:inline-block;font-family:'Manrope',sans-serif;">Want This Built? →</a></div>
     </div>
   </div>
 </div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      html.classList.add('light');
+      document.querySelectorAll('#theme-toggle').forEach(el => el.innerText = 'dark_mode');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.remove('light');
+      html.classList.add('dark');
+      document.querySelectorAll('#theme-toggle').forEach(el => el.innerText = 'light_mode');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+    document.querySelectorAll('#theme-toggle').forEach(el => el.innerText = 'light_mode');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
 </body>
+
 </html>

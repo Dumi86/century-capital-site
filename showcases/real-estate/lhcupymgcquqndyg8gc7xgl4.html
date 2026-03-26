@@ -10,8 +10,8 @@
 <script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","primary":"#000c1e","tertiary":"#23000a","secondary-fixed":"#ffe088","primary-container":"#002344","background":"#f8f9fa","outline":"#74777f","outline-variant":"#c3c6cf","on-error":"#ffffff","secondary-container":"#fed65b","on-background":"#191c1d","on-tertiary-container":"#de5f84","surface":"#f8f9fa","surface-container-highest":"#e1e3e4","on-surface":"#191c1d","surface-container-high":"#e7e8e9","on-primary-container":"#708bb2","on-secondary-container":"#745c00","surface-container-low":"#f3f4f5","on-primary":"#ffffff","on-surface-variant":"#43474e","secondary":"#735c00","tertiary-container":"#4c001f","surface-container":"#edeeef","on-secondary":"#ffffff","surface-bright":"#f8f9fa","surface-tint":"#456084"},fontFamily:{headline:["Noto Serif","serif"],body:["Manrope","sans-serif"],label:["Manrope","sans-serif"]},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"}}}}</script>
 <style>.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle;}body{font-family:'Manrope',sans-serif;padding-bottom:56px;}</style>
 </head>
-<body class="bg-surface text-on-background">
-<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-white/80 backdrop-blur-xl shadow-[0_24px_24px_rgba(0,12,30,0.04)] z-50"><a class="text-2xl font-serif italic tracking-tight text-primary" href="ejd3vezz2e9ssntzhjxox9lp.html">The Editorial Estate</a><div class="hidden md:flex gap-8"><a class="text-[#735c00] font-bold border-b-2 border-[#735c00] pb-1 text-sm" href="vkn0jpk48dy5ysaf3608b8k3.html">Buy</a><a class="text-[#191c1d] hover:text-[#735c00] text-sm" href="4wce04j9s133mo4clb6q35sk.html">Sell</a><a class="text-[#191c1d] hover:text-[#735c00] text-sm" href="nmxpssgmtqrnirsoqzi23tvm.html">Find an Agent</a></div><a href="4wce04j9s133mo4clb6q35sk.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-lg text-xs tracking-widest uppercase">List a Property</a></nav>
+<body class="bg-surface dark:bg-[#000c1e] text-on-background">
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-white/80 dark:bg-[#000c1e]/80 backdrop-blur-xl shadow-[0_24px_24px_rgba(0,12,30,0.04)] z-50"><a class="text-2xl font-serif italic tracking-tight text-primary" href="ejd3vezz2e9ssntzhjxox9lp.html">The Editorial Estate</a><div class="hidden md:flex gap-8"><a class="text-[#735c00] font-bold border-b-2 border-[#735c00] pb-1 text-sm" href="vkn0jpk48dy5ysaf3608b8k3.html">Buy</a><a class="text-[#191c1d] dark:text-[#f8f9fa] hover:text-[#735c00] text-sm" href="4wce04j9s133mo4clb6q35sk.html">Sell</a><a class="text-[#191c1d] dark:text-[#f8f9fa] hover:text-[#735c00] text-sm" href="nmxpssgmtqrnirsoqzi23tvm.html">Find an Agent</a></div><a href="4wce04j9s133mo4clb6q35sk.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-lg text-xs tracking-widest uppercase">List a Property</a></nav>
 <main class="pt-24 pb-20">
   <section class="px-8 mb-12">
     <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[600px]">
@@ -33,5 +33,30 @@
   </section>
 </main>
 <div class="fixed bottom-0 left-0 right-0 z-[9999] flex items-center justify-between px-6 py-3" style="background:#000c1e;font-family:'Manrope',sans-serif;"><div class="flex items-center gap-4"><span style="color:#e9c349;font-size:9px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;">⚡ Century Capital Demo</span><span style="color:rgba(255,255,255,0.35);font-size:9px;">Property Detail · Virtual Tour · Agent Enquiry</span></div><div class="flex items-center gap-4"><a href="ejd3vezz2e9ssntzhjxox9lp.html" style="background:#735c00;color:#fff;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:6px 16px;text-decoration:none;">Feature Tour</a><a href="../../ejd3vezz2e9ssntzhjxox9lp.html" style="color:rgba(255,255,255,0.4);font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;">← Portfolio</a></div></div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      html.classList.add('light');
+      document.querySelectorAll('#theme-toggle').forEach(el => el.innerText = 'dark_mode');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.remove('light');
+      html.classList.add('dark');
+      document.querySelectorAll('#theme-toggle').forEach(el => el.innerText = 'light_mode');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+    document.querySelectorAll('#theme-toggle').forEach(el => el.innerText = 'light_mode');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
 </body>
+
 </html>

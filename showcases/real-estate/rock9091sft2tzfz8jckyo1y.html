@@ -11,11 +11,36 @@
 <style>body{font-family:'Manrope',sans-serif;padding-bottom:56px;}</style>
 </head>
 <body class="bg-background">
-<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-white/80 backdrop-blur-xl shadow-[0_24px_24px_rgba(0,12,30,0.04)] z-50"><a class="text-2xl font-serif italic tracking-tight text-primary" href="ejd3vezz2e9ssntzhjxox9lp.html">The Editorial Estate</a></nav>
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-white/80 dark:bg-[#000c1e]/80 backdrop-blur-xl shadow-[0_24px_24px_rgba(0,12,30,0.04)] z-50"><a class="text-2xl font-serif italic tracking-tight text-primary" href="ejd3vezz2e9ssntzhjxox9lp.html">The Editorial Estate</a></nav>
 <main class="pt-24 min-h-screen px-8 lg:px-20 max-w-4xl mx-auto space-y-10">
-  <div class="w-full bg-primary text-white p-10 lg:p-16 mb-10"><h1 class="text-4xl font-serif font-bold">Alexander Hamilton</h1><p class="text-white/60 mt-1">Verified · KYC Status: Green</p></div>
-  <section class="space-y-6"><h2 class="text-2xl font-serif font-bold text-primary">Saved Searches</h2><div class="bg-white p-6 shadow-sm"><h4 class="font-serif font-bold text-primary mb-1">Cape Town Luxury · ≥ R 8M</h4></div></section>
+  <div class="w-full bg-primary dark:bg-secondary text-white dark:text-white p-10 lg:p-16 mb-10"><h1 class="text-4xl font-serif font-bold">Alexander Hamilton</h1><p class="text-white/60 mt-1">Verified · KYC Status: Green</p></div>
+  <section class="space-y-6"><h2 class="text-2xl font-serif font-bold text-primary">Saved Searches</h2><div class="bg-white dark:bg-[#000c1e] p-6 shadow-sm"><h4 class="font-serif font-bold text-primary mb-1">Cape Town Luxury · ≥ R 8M</h4></div></section>
 </main>
 <div class="fixed bottom-0 left-0 right-0 z-[9999] flex items-center justify-between px-6 py-3" style="background:#000c1e;font-family:'Manrope',sans-serif;"><div class="flex items-center gap-4"><span style="color:#e9c349;font-size:9px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;">⚡ Century Capital Demo</span><span style="color:rgba(255,255,255,0.35);font-size:9px;">User Profile</span></div><div class="flex items-center gap-4"><a href="ejd3vezz2e9ssntzhjxox9lp.html" style="background:#735c00;color:#fff;font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:6px 16px;text-decoration:none;">Feature Tour</a><a href="../../ejd3vezz2e9ssntzhjxox9lp.html" style="color:rgba(255,255,255,0.4);font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;">← Portfolio</a></div></div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      html.classList.add('light');
+      document.querySelectorAll('#theme-toggle').forEach(el => el.innerText = 'dark_mode');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.remove('light');
+      html.classList.add('dark');
+      document.querySelectorAll('#theme-toggle').forEach(el => el.innerText = 'light_mode');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+    document.querySelectorAll('#theme-toggle').forEach(el => el.innerText = 'light_mode');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
 </body>
+
 </html>
