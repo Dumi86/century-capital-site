@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Study: The Editorial Estate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-secondary-fixed": "#241a00",
+                "on-tertiary-fixed-variant": "#871a42",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed": "#ffd9e0",
+                "secondary-container": "#fed65b",
+                "inverse-surface": "#2e3132",
+                "on-surface": "#191c1d",
+                "on-secondary": "#ffffff",
+                "on-primary": "#ffffff",
+                "on-error-container": "#93000a",
+                "on-tertiary": "#ffffff",
+                "surface-tint": "#456084",
+                "surface-container-high": "#e7e8e9",
+                "primary": "#000c1e",
+                "surface-variant": "#e1e3e4",
+                "tertiary": "#23000a",
+                "on-surface-variant": "#43474e",
+                "error-container": "#ffdad6",
+                "error": "#ba1a1a",
+                "surface-bright": "#f8f9fa",
+                "surface": "#f8f9fa",
+                "on-secondary-container": "#745c00",
+                "on-tertiary-fixed": "#3f0018",
+                "secondary-fixed": "#ffe088",
+                "on-tertiary-container": "#de5f84",
+                "secondary": "#735c00",
+                "inverse-primary": "#adc8f2",
+                "on-primary-container": "#708bb2",
+                "primary-fixed": "#d3e3ff",
+                "secondary-fixed-dim": "#e9c349",
+                "tertiary-fixed-dim": "#ffb1c2",
+                "surface-container": "#edeeef",
+                "primary-fixed-dim": "#adc8f2",
+                "on-background": "#191c1d",
+                "surface-container-low": "#f3f4f5",
+                "outline-variant": "#c3c6cf",
+                "outline": "#74777f",
+                "on-primary-fixed-variant": "#2c486b",
+                "tertiary-container": "#4c001f",
+                "surface-dim": "#d9dadb",
+                "background": "#f8f9fa",
+                "on-primary-fixed": "#001c38",
+                "inverse-on-surface": "#f0f1f2",
+                "primary-container": "#002344",
+                "on-error": "#ffffff",
+                "on-secondary-fixed-variant": "#574500",
+                "surface-container-highest": "#e1e3e4"
+              },
+              fontFamily: {
+                "headline": ["Noto Serif"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Noto Serif', serif; }
+        .perspective-grid {
+            perspective: 1000px;
+        }
+        .rotated-screen {
+            transform: rotateY(-15deg) rotateX(10deg) scale(0.9);
+            transition: transform 0.5s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .rotated-screen:hover {
+            transform: rotateY(0deg) rotateX(0deg) scale(1);
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-background selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl top-0 sticky z-50 border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="font-serif text-2xl font-bold tracking-tighter text-[#000c1e] dark:text-white">
+            The Editorial Estate
+        </div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-[#735c00] dark:text-[#de5f84] font-bold border-b-2 border-[#735c00] pb-1" href="#">Case Study</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#000c1e] dark:hover:text-white transition-colors" href="#design-system">Design System</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#000c1e] dark:hover:text-white transition-colors" href="#features">Experience</a>
+</div>
+<button onclick="window.location.href='../../tmfvm8zba3eo3dtvdfwkho0z.html'" class="bg-primary text-on-primary px-8 py-3 rounded-md font-label text-sm tracking-widest uppercase hover:bg-opacity-90 transition-all duration-300 shadow-lg shadow-primary/20 flex items-center gap-2">
+            Back to Site <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col items-center justify-center pt-20 px-8 overflow-hidden bg-surface-container-low">
+<div class="z-10 text-center max-w-4xl mx-auto mb-16">
+<span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label text-xs tracking-widest uppercase">Portfolio Feature</span>
+<h1 class="text-6xl md:text-8xl font-headline tracking-tighter text-primary mb-6">
+                The Editorial Estate: <br/><span class="italic text-secondary">Case Study</span>
+</h1>
+<p class="text-xl md:text-2xl font-body text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                A Premium Real Estate Ecosystem for South Africa, merging architectural precision with curated discovery.
+            </p>
+</div>
+<div class="relative w-full max-w-6xl mx-auto perspective-grid">
+<div class="flex justify-center items-center gap-4 md:-space-x-24">
+<img class="w-1/3 rounded-xl shadow-2xl rotated-screen z-10 border-4 border-surface-container-lowest" data-alt="Modern luxury villa with infinity pool at dusk, warm interior lights reflecting on water, cinematic architecture photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKOYVfq9dmpp7eC1IBQSL28E1OiTsIEU2igyuIL6aATTsA5YEv-a51kCjFPu--i_juDDFVFvnzbkDCwU4TVxiKscukdnqcsEGAbHjszqaE0X5daviS4qLeVHcEcTzZcOpzOJkEQWMQpb6bxLrAdYrrp8ELrwU40ADiFnmbJqlIc2O-gUyPVzG6Wp4e8Y-v5fmdX2DAnsfknWGaug8xKa5lw9QHFJDVIN-UxX59W8hSCO8Xx2bcO8F2dVwnyQHj-jJnxmfiMAn13PtT"/>
+<img class="w-2/5 rounded-xl shadow-2xl z-20 border-4 border-surface-container-lowest scale-110" data-alt="Minimalist interior design with large glass windows showing a lush South African landscape, high-end furniture, soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1thvGRe3yIvIgDWVQA2uGiiwe_tEosT2xXAiO03i3ziLNS0nQS-KxhLjT-HkJfkil5PE53oeN5PACmzmMMxjmAGdgRwt7vvVVh3nAQ_M2VSN0Be5NdQUaB4y42eIa4W_kTLVRfQYNaRTeb1hOKmdh_6toS1VUZjkU-VqjNvGIU-t8NYXUwGdVud89TA5WmBFGmBDmsgEnUiDVC_KxhjDO65Ee7tY09dbWiTsLlNRdSKcMEYiYMpFRrTzSt5riRV-jnhRRszO1ItNo"/>
+<img class="w-1/3 rounded-xl shadow-2xl rotated-screen z-10 border-4 border-surface-container-lowest" data-alt="Elegant home office with dark wood accents and architectural blueprints, professional and sophisticated atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJpUMDkdBwJ01YFXhil4zuSPapXdkUxXp5Xz8SXWIS3Wg5fagLYUtj6dLcqtvTpln9INpeMYW-40u97KptF9N3yTC8SCvgbhjZ2GstfORCDMPXLLTxDmX1Nhd82U-hz55IMneUcUjuYc-0ijokYa11kKB0h3pT_tc-Qk9v1QIkL1Xr-fpw5oGMsRf-FQHDz89Fy5PukhOxNuf388yXO8XnlOj73R2qCXF79Mh4294ZYTAPmXo8rFGmiHCEat2ZzUNFcJwIdkiBg9X4" style="transform: rotateY(15deg) rotateX(10deg) scale(0.9);"/>
+</div>
+</div>
+<!-- Geometric Texture Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-10" style="background-image: radial-gradient(circle at 2px 2px, #74777f 1px, transparent 0); background-size: 40px 40px;"></div>
+</section>
+<!-- Project Overview -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 gap-24 items-start">
+<div>
+<h2 class="text-4xl font-headline text-primary mb-8 underline decoration-secondary decoration-4 underline-offset-8">The Vision</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                    The Editorial Estate was conceived to disrupt the commoditized real estate market. Our objective was to create a digital sanctuary where property isn't just a listing, but a narrative of lifestyle and investment.
+                </p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="star">star</span>
+<div>
+<h4 class="font-bold text-primary">Premium Discovery</h4>
+<p class="text-sm text-on-surface-variant">Elevating the search experience through high-fidelity imagery and editorial layouts.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="dashboard_customize">dashboard_customize</span>
+<div>
+<h4 class="font-bold text-primary">Efficient Management</h4>
+<p class="text-sm text-on-surface-variant">Providing agents with a sleek, data-driven CRM to manage listings effortlessly.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
+<div>
+<h4 class="font-bold text-primary">Professional CRM</h4>
+<p class="text-sm text-on-surface-variant">Bridging the gap between luxury buyers and elite South African estate agents.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-12 rounded-none border-l-8 border-secondary">
+<h3 class="text-2xl font-headline mb-6 italic">Core Value Proposition</h3>
+<p class="text-on-surface mb-8 font-body">"To transform real estate transactions into a curated gallery experience, ensuring every interaction feels as bespoke as the properties themselves."</p>
+<hr class="border-outline-variant mb-8"/>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<span class="block text-3xl font-headline text-primary">150+</span>
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">Curated Estates</span>
+</div>
+<div>
+<span class="block text-3xl font-headline text-primary">12ms</span>
+<span class="text-xs uppercase tracking-widest text-secondary font-bold">Interaction Speed</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Design System Showcase -->
+<section class="py-32 bg-primary text-on-primary" id="design-system">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-5xl font-headline mb-6">The Design System</h2>
+<p class="text-primary-fixed-dim text-lg">A meticulous framework built on the principles of heritage and modern utility. We call it <span class="text-secondary-fixed">The Curated Heritage</span>.</p>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest"></div>
+<div class="w-12 h-12 rounded-full bg-secondary"></div>
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed-dim"></div>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-12">
+<!-- Typography -->
+<div class="space-y-8 p-8 border border-outline-variant/20">
+<h3 class="text-xl font-label uppercase tracking-widest text-secondary-fixed">Typography</h3>
+<div class="space-y-4">
+<div>
+<p class="text-xs text-primary-fixed-dim mb-2 uppercase tracking-tighter">Headline / Noto Serif</p>
+<p class="text-4xl font-headline italic">The Estate</p>
+</div>
+<div>
+<p class="text-xs text-primary-fixed-dim mb-2 uppercase tracking-tighter">Body / Manrope</p>
+<p class="text-sm font-body leading-relaxed">Precision-engineered for clarity and modern professional aesthetics across all device types.</p>
+</div>
+</div>
+</div>
+<!-- Palette -->
+<div class="space-y-8 p-8 border border-outline-variant/20">
+<h3 class="text-xl font-label uppercase tracking-widest text-secondary-fixed">Color Palette</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<div class="h-16 w-full bg-[#000c1e] border border-white/10"></div>
+<span class="text-[10px] block font-mono">Deep Navy / #000C1E</span>
+</div>
+<div class="space-y-2">
+<div class="h-16 w-full bg-[#735c00]"></div>
+<span class="text-[10px] block font-mono">Heritage Gold / #735C00</span>
+</div>
+<div class="space-y-2">
+<div class="h-16 w-full bg-[#f8f9fa] text-primary flex items-end p-1">
+<span class="text-[8px] font-bold">CRISP</span>
+</div>
+<span class="text-[10px] block font-mono">Bright / #F8F9FA</span>
+</div>
+<div class="space-y-2">
+<div class="h-16 w-full bg-[#de5f84]"></div>
+<span class="text-[10px] block font-mono">Protea / #DE5F84</span>
+</div>
+</div>
+</div>
+<!-- Ethos -->
+<div class="space-y-8 p-8 border border-outline-variant/20 bg-white/5">
+<h3 class="text-xl font-label uppercase tracking-widest text-secondary-fixed">Design Ethos</h3>
+<ul class="space-y-4 text-sm font-body">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Intentional Asymmetry</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Shadow-less Depth</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Editorial Breathability</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Tonal Layering</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Deep-Dive -->
+<section class="py-32 bg-surface-bright" id="features">
+<div class="max-w-7xl mx-auto px-8">
+<!-- Feature 1: Discovery -->
+<div class="mb-40">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/2">
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.3em]">Module 01</span>
+<h2 class="text-5xl font-headline mt-4 mb-8">Discovery First</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+                            The search experience utilizes an integrated split-view map system and a magazine-style home landing. We prioritized visual breathing room and high-impact photography to reduce search fatigue and elevate the browsing journey.
+                        </p>
+<div class="flex gap-4">
+<div class="bg-surface-container p-4 rounded-xl flex-1">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="map">map</span>
+<p class="text-xs font-bold">Contextual Mapping</p>
+</div>
+<div class="bg-surface-container p-4 rounded-xl flex-1">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="filter_list">filter_list</span>
+<p class="text-xs font-bold">Smart Filtering</p>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 relative">
+<div class="aspect-square bg-surface-container-high rounded-full absolute -top-10 -right-10 w-full h-full -z-10"></div>
+<img class="rounded-xl shadow-2xl border-4 border-white" data-alt="Aerial view of a coastal luxury development in South Africa, turquoise waters and modern architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXzVQG83_R4iLEcutuWvhYyQZ_UM7VupPr_Cho--BFnpwqjUlS92iL84EOchfDZv6IZlShcuhd4mkwwAsDm8taGdaGfkM6rF8qnyHwiSAcmF1kbiDZTpTQX7gIeEaQImZwC1hv9SM8Bg0xK7WxshxTxUVo3ccXGcn8av8r_DbgTgHnyqzgSXAW35LWVwnG1dwH7w730fBQRROSwr_AnDlxd2NZpn2_0e_9wcu1YcwZAP9jHfqqFkYtVYMfiSEtn0D49GxIUu6XyYd3"/>
+</div>
+</div>
+</div>
+<!-- Feature 2: Detail -->
+<div class="mb-40">
+<div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+<div class="md:w-1/2">
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.3em]">Module 02</span>
+<h2 class="text-5xl font-headline mt-4 mb-8">The Detail View</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+                            The Property Detail Page is treated as a feature article. We removed standard sidebar clutter to allow the architecture of the home to speak for itself, using fixed action bars for conversion while maintaining an immersive atmosphere.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 bg-white shadow-sm border-l-4 border-secondary">
+<span class="font-headline italic text-2xl text-primary">01</span>
+<p class="text-sm font-body">Immersive 4K Gallery Integration</p>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white shadow-sm border-l-4 border-secondary">
+<span class="font-headline italic text-2xl text-primary">02</span>
+<p class="text-sm font-body">Direct Agent Concierge Link</p>
+</div>
+</div>
+</div>
+<div class="md:w-1/2">
+<img class="rounded-xl shadow-2xl border-4 border-white" data-alt="Evening shot of a luxury estate entrance with warm lighting and architectural details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvWz4ppY8J6GxS0Q0l-_8ulyUiZ4PdkTH0GxDkZkCNJAVntbahCVOPvW2JtjvwH7r6IJ7fhz0ZdZ3BB-_NjSvJfem2tXUZoWR81R2niPqAORs7uZqMmgihbYlKfPMNhn_7IVdJGQKJdVLxKNsyaUbSHASQR0EK-ggY0I0qLVsGPEdmWlCpVaT2AtLr5ps9jqHMXueIDSlO7mmwMU2EaQ0mhzUiNGeRsybg8GmwdT02oXtKpxR-rz6iJ4pS604sLBJ_WD8QO6CvccOx"/>
+</div>
+</div>
+</div>
+<!-- Feature 3: Professional & Personalized -->
+<div class="mb-40">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-primary p-12 text-on-primary rounded-none flex flex-col justify-between">
+<div>
+<span class="text-tertiary-fixed-dim font-bold text-xs uppercase tracking-[0.3em]">Module 03</span>
+<h2 class="text-4xl font-headline mt-4 mb-6">Professional Layer</h2>
+<p class="text-primary-fixed-dim mb-8">
+                                The Agent Dashboard and Listing Creation tools provide a powerhouse for professionals. High-density data visualization meets an intuitive, guided flow for creating new listings and managing elite client relationships.
+                            </p>
+</div>
+<img class="rounded-lg shadow-xl" data-alt="Close up of a designer desk with architectural plans and a professional workstation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9qIqwqzNKUKP8prS3mq7RKukRRy_EEazy3u-ojYt3QfLpb2u4zfOKXzUYb6CioYAmx9taf2k_zhknhVVvMnMwcjvGcmt_TThiCmGMIz0AdL6iFto0dDiPeaYCId6bNLwkiAgVkeQ9OczOcrCUs4HDpxE0gKDd0D1zBefPoYE4KPSscxsASDAoNwhnruWvMuM4Xd3oq1WX-hiDTBfsmkQ6VpeEj78R7-zZGRTNNw6UMJRbvVdSD9Q3TQReRpOfLYUl5VpgwyqH9ohJ"/>
+</div>
+<div class="bg-surface-container-low p-12 text-on-surface rounded-none flex flex-col justify-between">
+<div>
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.3em]">Module 04</span>
+<h2 class="text-4xl font-headline mt-4 mb-6">Personalized Journey</h2>
+<p class="text-on-surface-variant mb-8">
+                                The User Profile &amp; Saved Preferences interface ensures long-term engagement through intelligent saving and tailored notifications, creating a deeply personal connection to the properties.
+                            </p>
+</div>
+<img class="rounded-lg shadow-xl" data-alt="Luxury living room with comfortable seating and a view of the garden, representing home personalization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDawNoXkgTEMetlAtZyz8sddtrLwhsx1_7ZH0pxtt1UI0XDNNcM4jInSe8PsgXrU2M1bSTaBY4u6u3E5YFZou-8t6ReCdO5Ao3eNekv4Ut7kM5K41qhyNkEPtjrHlV8g5ylPydU3CaBODkg6fcpBMHFgyQY0mAS8uwe3GCfZIHePsBnlGJhi3c1eTYxGCnBVfAhBeyAG7Ve5ltnGjWS-PJ8stmi0Az-LcDiTdzOosEUixVKd66NfLL_J_7Fgn094xUbgiuVC4CSRXFr"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Conclusion -->
+<section class="py-40 px-8 text-center bg-white">
+<h2 class="text-5xl md:text-7xl font-headline text-primary mb-8 max-w-4xl mx-auto">
+            Ready for the next generation of property discovery.
+        </h2>
+<p class="text-xl text-on-surface-variant mb-12 font-body italic">"Redefining luxury real estate, one pixel at a time."</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button onclick="window.location.href='../../tmfvm8zba3eo3dtvdfwkho0z.html'" class="bg-primary text-on-primary px-12 py-5 rounded-md font-label text-sm tracking-widest uppercase hover:bg-opacity-90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/20">
+                Back to Site <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button onclick="window.location.href='century-capital-case-study.pdf'" class="border-2 border-primary text-primary px-10 py-5 rounded-md font-label text-sm tracking-widest uppercase hover:bg-primary hover:text-white transition-all">
+                Download PDF Case Study
+            </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 full-width py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 w-full gap-6 max-w-screen-2xl mx-auto">
+<div class="font-serif italic text-lg text-[#000c1e] dark:text-white">
+            The Editorial Estate
+        </div>
+<div class="flex gap-8 text-xs uppercase tracking-widest font-sans font-medium text-slate-500 dark:text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="mailto:hello@centurycapital.co.za">Contact Developer</a>
+</div>
+<div class="text-slate-500 dark:text-slate-500 text-[10px] uppercase tracking-widest">
+            © 2026 Century Capital. A Curated Heritage Project.
+        </div>
+</div>
+</footer>
+</body></html>

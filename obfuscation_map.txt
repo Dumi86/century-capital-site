@@ -21,3 +21,4 @@ list-property.html -> 4wce04j9s133mo4clb6q35sk.html
 profile.html -> rock9091sft2tzfz8jckyo1y.html
 property-detail.html -> lhcupymgcquqndyg8gc7xgl4.html
 search.html -> vkn0jpk48dy5ysaf3608b8k3.html
+showcases/real-estate/case-study.html -> ydge33whaclv1y3a62wv4yha.html
